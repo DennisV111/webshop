@@ -158,7 +158,8 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label class="info-title control-label">State/Province <span>*</span></label>
+                                        <label class="info-title control-label">State/Province
+                                            <span>*</span></label>
                                         <select class="form-control unicase-form-control selectpicker">
                                             <option>--Select options--</option>
                                             <option>Groningen</option>
@@ -200,7 +201,8 @@
                                             placeholder="You Coupon..">
                                     </div>
                                     <div class="clearfix pull-right">
-                                        <button type="submit" class="btn-upper btn btn-primary">APPLY COUPON</button>
+                                        <button type="submit" class="btn-upper btn btn-primary">APPLY
+                                            COUPON</button>
                                     </div>
                                 </td>
                             </tr>
@@ -235,3 +237,14 @@
                         </tbody><!-- /tbody -->
                     </table><!-- /table -->
                 </div><!-- /.cart-shopping-total -->
+
+
+
+
+
+
+            </div><!-- /.shopping-cart -->
+        </div> <!-- /.row -->
+    </div><!-- /.body-content -->
+
+</div>
