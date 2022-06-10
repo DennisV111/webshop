@@ -9,7 +9,7 @@ class Item extends Model
 {
     use HasFactory;
 
-    protected $table = "items";
+    protected $table = 'items';
 
     protected $guarded = ['id'];
 
@@ -17,13 +17,12 @@ class Item extends Model
     {
         return $this->hasMany('\App\Models\OrderItem');
     }
-    public function item_stocks()
-    {
-        return $this->belongsTo('\App\Models\ItemStock');
+
+    public function item_stock() {
+         return $this->belongsTo('\App\Models\ItemStock');
     }
-    public function item_categories()
-    {
-        return $this->belongsTo('\App\Models\ItemCategory');
+    public function item_category() {
+         return $this->belongsTo('\App\Models\ItemCategory');
     }
     public function reviews()
     {

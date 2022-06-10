@@ -4,9 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\Item;
-
-class ItemController extends Controller
+class ItemStockController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +13,7 @@ class ItemController extends Controller
      */
     public function index()
     {
-        $items = Item::all();
-
-        return view('frontend.index', compact('items'));
+        //
     }
 
     /**
@@ -27,7 +23,7 @@ class ItemController extends Controller
      */
     public function create()
     {
-        return view('frontend.index.create');
+        //
     }
 
     /**
@@ -38,25 +34,7 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'item_category_id' => 'required',
-            'stock_id' => 'required',
-            'title' => 'required|max:60',
-            'author' => 'required|max:60',
-            'description' => 'required|max:60',
-            'language' => 'required|max:60',
-            'isbn' => 'required|max:20',
-            'dimensions' => 'required|max:60',
-            'image_name' => 'required|max:60',
-            'published' => 'required',
-            'format' => 'required|max:20',
-            'pages' => 'required',
-            'price' => 'required',
-            'vat' => 'required'
-        ]);
-        $item = Item::create($validatedData);
-
-        return redirect('/items');
+        //
     }
 
     /**
@@ -67,9 +45,7 @@ class ItemController extends Controller
      */
     public function show($id)
     {
-        $item = Item::findOrFail($id);
-
-        return view('frontend.index.show', compact('item'));
+        //
     }
 
     /**
