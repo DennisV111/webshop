@@ -17,3 +17,4 @@ class ItemCategory extends Model
          return $this->hasMany('\App\Models\Item');
     }
 }
+
