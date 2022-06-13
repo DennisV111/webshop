@@ -28,7 +28,7 @@
                     <a class="nav-link active h4" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link h4" href="#">Shop</a>
+                    <a class="nav-link h4" href="{{ route('dennis.index') }}">Shop</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link h4" href="#">About</a>
