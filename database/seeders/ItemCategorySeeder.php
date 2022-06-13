@@ -27,7 +27,7 @@ class ItemCategorySeeder extends Seeder
 
         foreach ($item_categories as $category) {
             \App\Models\ItemCategory::create([
-                'name'  => $category,
+                'name'  => $category
             ]);
         }
     }

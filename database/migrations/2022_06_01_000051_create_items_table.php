@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreign('item_category_id')->references('id')->on('item_categories');
             $table->unsignedInteger('stock_id');
             $table->foreign('stock_id')->references('id')->on('item_stocks');
-            $table->string('title',60);
+            $table->string('title',100);
             $table->string('author',60);
             $table->text('description',60);
             $table->string('language',60);
@@ -28,7 +28,7 @@ return new class extends Migration
             $table->string('image_name',60);
             $table->date('published');
             $table->string('format',20);
-            $table->tinyInteger('pages');
+            $table->smallInteger('pages');
             $table->decimal('price',5,2);
             $table->decimal('vat',4,2);
             $table->timestamps();

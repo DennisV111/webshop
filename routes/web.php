@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 // use App\Http\Controllers\Frontend\IndexController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\DennisController;
 use App\Http\Controllers\ItemCategoryController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\ItemStockController;
@@ -37,6 +38,11 @@ use App\Http\Controllers\UserController;
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 Route::get('items', [ItemController::class, 'index'])->name('items.index');
+
+
+// test van Dennis
+Route::get('dennis/shop', [DennisController::class, 'index'])->name('dennis.index');
+
 
 //onderstaande routes zijn een voorbeeld uit de CV-app (doen hier niks)
 
