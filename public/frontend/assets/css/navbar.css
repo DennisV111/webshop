@@ -1,67 +1,83 @@
-.container-fluid {
-    max-width: 120rem;
-    width: 90%;
-    margin: 0 auto;
-    
-}
+/* .container-fluid {
+    height: inherit;
+    margin: 0;
+    padding: 0;
 
-.navbar{
+} */
+
+.navbar {
     padding-top: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgba(68, 64, 64, 0.507);
     font-size: 1.6rem;
+    box-shadow: #f4a261 0px 0px 15px;
 }
 
-nav .navbar .navbar-brand{
+.navbar a {
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 500;
 }
 
-.container-logo :hover{
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .navbar .navbar-brand {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.container-logoo {
+    margin-bottom: 10rem;
+}
+
+.container-logo :hover {
     text-decoration: none;
 }
 
-#book:hover{
+#book:hover {
     border-color: #f4a261;
     color: white;
     box-shadow: 0 .5em 0.5em -.4em #f4a261;
     transform: translateY(-.25em);
 }
 
-#book{
+#book {
     text-transform: uppercase;
     color: #b35867be;
 }
 
-#b{
-font-size: 3rem;
-border-radius: 1rem;
+#b {
+    font-size: 60px;
+    border-radius: 1rem;
 }
 
-#logo-text{
+#logo-text {
     font-family: 'Dancing Script', cursive;
-    font-size: 3rem;
+    font-size: 40px;
     /* color-adjust:linear-gradient(to left, rgba(0,0,0,.8), rgba(0,0,0,.1));    */
 }
 
-nav ul{
+nav ul {
     display: flex;
 }
 
-nav ul li{
+nav ul li {
     list-style: none;
 }
 
-nav ul li .nav-link{
+nav ul li .nav-link {
     padding: 2rem 0;
     margin: 0 1rem;
     position: relative;
     /* right:10%; */
     letter-spacing: 2px;
     font-size: 1.3rem;
-    text-decoration: none;
+    text-decoration: pxnone;
 }
 
 /* nav ul li .nav-link:hover{
@@ -80,5 +96,3 @@ border-radius: 10px;
     background-position: center;
     z-index: 999;
 } */
-
-
