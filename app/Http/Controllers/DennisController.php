@@ -17,7 +17,7 @@ class DennisController extends Controller
     {
         $items = Item::all();
 
-        return view('dennis.shop', compact('items'));
+        return view('frontend.shop-page', compact('items'));
     }
 
     /**

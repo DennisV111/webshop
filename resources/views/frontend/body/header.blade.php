@@ -24,10 +24,13 @@
         <div class="collapse navbar-collapse col-7 justify-content-center" id="navbarTogglerDemo03">
             <ul class="navbar-nav my-2 my-lg-0" style="--bs-scroll-height: 100px;">
                 <li class="nav-item">
-                    <a class="nav-link active h4" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active h4" aria-current="page" href="{{ url('/') }}">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link h4" href="{{ route('dennis.index') }}">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link h4" href="{{ route('itemcategory.index') }}">Category</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link h4" href="#">About</a>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Item;
+use Illuminate\Support\Facades\DB;
 
 class ItemController extends Controller
 {
@@ -104,5 +105,24 @@ class ItemController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+
+    // New Function Anas
+
+    public function showPagination()
+    {
+        $items = DB::table('items')->paginate(9);
+
+        return view('frontend.category', compact('items'));
+    }
+
+    public function showSearch(Request $request)
+    {
+        $search = $request->search;
+        $items = Item::where('title', 'like', '%' . $search . '%')->all();
+
+        return view('frontend.index', compact('items'));
     }
 }

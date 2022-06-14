@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ItemCategory;
 use Illuminate\Http\Request;
 
 class ItemCategoryController extends Controller
@@ -13,7 +14,9 @@ class ItemCategoryController extends Controller
      */
     public function index()
     {
-        //
+        $item_categories = ItemCategory::all();
+
+        return view('frontend.category', compact('item_categories'));
     }
 
     /**
