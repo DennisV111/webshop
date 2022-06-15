@@ -1,0 +1,63 @@
+h2 {
+    color: blue;
+}
+
+div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+th {
+    /*width: 120px;*/
+    height: 30px;
+    text-align: center;
+    background-color:rgb(194, 194, 229);
+}
+
+td {
+    /*width: 120px;*/
+    height: 20px;
+    text-align: center;
+    background-color: rgb(216, 224, 224);
+}
+
+caption {
+    height: 30px;
+    font-size: larger;
+    background-color:rgb(173, 204, 231);
+}
+
+.button {
+    border: 2px black solid;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    /* width: 160px;
+    height: 30px; */
+  }
+
+.add {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.nav {
+    background-color: rgb(175, 219, 231);
+    color: black;
+}
+
+.show {
+    background-color: rgb(204, 204, 204);
+}
+
+.edit {
+    background-color: yellow;
+}
+
+.delete {
+    color: black;
+    background-color:rgb(204, 204, 204);
+}

@@ -15,9 +15,13 @@ class ItemController extends Controller
      */
     public function index()
     {
-        $items = Item::all();
+        //$items = Item::all();
+        $items = Item::with('item_category')->get();
 
-        return view('frontend.index', compact('items'));
+        $indexAttributes = ['title','author','isbn' , 'item_category->name', 'stock_id'];
+
+        return view('admin.items.index', compact('items','indexAttributes'));
+
     }
 
     /**
@@ -27,7 +31,7 @@ class ItemController extends Controller
      */
     public function create()
     {
-        return view('frontend.index.create');
+        return view('admin.items.create');
     }
 
     /**
@@ -68,8 +72,11 @@ class ItemController extends Controller
     public function show($id)
     {
         $item = Item::findOrFail($id);
+      
+        $attributes = array_keys($item->toArray());
+        $showTableAttributes = array_slice($attributes, 0, count($attributes)-2);
 
-        return view('frontend.index.show', compact('item'));
+        return view('admin.items.show', compact('item','showTableAttributes'));
     }
 
     /**
@@ -78,9 +85,13 @@ class ItemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, $attribute)
     {
-        //
+        dd($attribute);
+        //route('admin.items.edit', [$item->id, $item[$attribute] ])
+        $item = Item::findOrFail($id);
+
+        return view('admin.items.edit', compact('item','attribute'));
     }
 
     /**
