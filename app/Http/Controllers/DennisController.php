@@ -16,11 +16,9 @@ class DennisController extends Controller
      */
     public function index()
     {
-        $items = Item::all();
-        $categories = ItemCategory::all();
-        $authors = Item::select('author')->distinct()->get()->sortBy('author');
+        $items = Item::paginate(9);
 
-        return view('dennis.shop', compact('items','categories','authors'));
+        return view('frontend.shop-page', compact('items'));
     }
 
     /**
