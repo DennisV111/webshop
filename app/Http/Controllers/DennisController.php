@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Item;
+use App\Models\ItemCategory;
 
 class DennisController extends Controller
 {
@@ -16,8 +17,10 @@ class DennisController extends Controller
     public function index()
     {
         $items = Item::all();
+        $categories = ItemCategory::all();
+        $authors = Item::select('author')->distinct()->get()->sortBy('author');
 
-        return view('dennis.shop', compact('items'));
+        return view('dennis.shop', compact('items','categories','authors'));
     }
 
     /**
