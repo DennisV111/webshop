@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\ItemCategory;
 use Illuminate\Http\Request;
+use App\Models\Item;
+
+
 
 class ItemCategoryController extends Controller
 {
@@ -15,8 +18,6 @@ class ItemCategoryController extends Controller
     public function index()
     {
         $item_categories = ItemCategory::all();
-
-        return view('frontend.category', compact('item_categories'));
     }
 
     /**
@@ -83,5 +84,19 @@ class ItemCategoryController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+
+    // New Function Anas
+    public function showCategoryPage()
+    {
+        $item_categories = ItemCategory::all();
+        $items = Item::paginate(12);
+
+        return view('frontend.category')->with([
+            'items' =>  $items,
+            'item_categories' => $item_categories
+        ]);
     }
 }

@@ -15,7 +15,7 @@ class DennisController extends Controller
      */
     public function index()
     {
-        $items = Item::all();
+        $items = Item::paginate(9);
 
         return view('frontend.shop-page', compact('items'));
     }

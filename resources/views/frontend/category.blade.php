@@ -99,12 +99,13 @@
                                                 <span class="pull-left">$50.00</span>
                                                 <span class="pull-right">$300.00</span>
                                             </span>
-                                            <input type="text" id="amount" style="
-                                                                                                                    border: 0;
-                                                                                                                    color: #666666;
-                                                                                                                    font-weight: bold;
-                                                                                                                    text-align: center;
-                                                                                                                " />
+                                            <input type="text" id="amount"
+                                                style="
+                                                                                                                                            border: 0;
+                                                                                                                                            color: #666666;
+                                                                                                                                            font-weight: bold;
+                                                                                                                                            text-align: center;
+                                                                                                                                        " />
                                             <input type="text" class="price-slider" value="" />
                                         </div>
                                         <!-- /.price-range-holder -->
@@ -327,9 +328,7 @@
                                 <div class="tab-pane active" id="grid-container">
                                     <div class="category-product">
                                         <div class="row">
-                                            @php
-                                                $items = \App\Models\Item::all();
-                                            @endphp
+
                                             @foreach ($items as $item)
                                                 <div class="col-sm-6 col-md-3 wow fadeInUp">
                                                     <div class="products">
@@ -395,7 +394,7 @@
 
                                             {{ $items->links() }}
 
-                                            {{-- {{ $item->links() }} --}}
+
 
                                             <div class="product-info text-left">
                                                 <h3 class="name">

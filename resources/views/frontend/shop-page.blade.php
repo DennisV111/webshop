@@ -63,4 +63,6 @@
                             </div>
                             <!-- /.item -->
                         @endforeach
+
+                        {{ $items->links() }}
                     @endsection

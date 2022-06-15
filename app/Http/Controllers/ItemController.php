@@ -111,18 +111,18 @@ class ItemController extends Controller
 
     // New Function Anas
 
-    public function showPagination()
+    public function categoryPagination()
     {
-        $items = DB::table('items')->paginate(9);
+        $items = Item::paginate(9);
 
         return view('frontend.category', compact('items'));
     }
 
-    public function showSearch(Request $request)
-    {
-        $search = $request->search;
-        $items = Item::where('title', 'like', '%' . $search . '%')->all();
+    // public function showSearch(Request $request)
+    // {
+    //     $search = $request->search;
+    //     $items = Item::where('title', 'like', '%' . $search . '%')->all();
 
-        return view('frontend.index', compact('items'));
-    }
+    //     return view('frontend.index', compact('items'));
+    // }
 }

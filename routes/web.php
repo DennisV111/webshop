@@ -13,6 +13,7 @@ use App\Http\Controllers\OrderItemController;
 use App\Http\Controllers\OrderStatusController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,7 +40,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 Route::get('items', [ItemController::class, 'index'])->name('items.index');
 
-Route::get('frontend/category', [ItemCategoryController::class, 'index'])->name('itemcategory.index');
+Route::get('frontend/category', [ItemCategoryController::class, 'showCategoryPage'])->name('itemcategory.index');
 
 Route::get('frontend/shop-page', [DennisController::class, 'index'])->name('dennis.index');
 
@@ -97,6 +98,7 @@ Route::get('frontend/book-details/detail', function () {
 
 //Frontend Item Details
 
-Route::get('/frontend/book_details/details/{id}', function () {
-    return view('frontend.book_details.details');
-});
+// Route::get('frontend/category', [ItemCategoryController::class, 'categoryPagination'])->name('itemCategory.categoryPagination');
+
+
+// Route::get('frontend/category', [ItemCategoryController::class, 'categoryPagination'])->name('category.categoryPagination');
