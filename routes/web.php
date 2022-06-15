@@ -44,26 +44,10 @@ Route::get('frontend/category', [ItemCategoryController::class, 'showCategoryPag
 
 Route::get('frontend/shop-page', [DennisController::class, 'index'])->name('dennis.index');
 
-
+Route::resource('admin/items', ItemController::class)->names('admin.items');
 
 // test van Dennis
 // Route::get('dennis/shop', [DennisController::class, 'index'])->name('dennis.index');
-
-
-//onderstaande routes zijn een voorbeeld uit de CV-app (doen hier niks)
-
-
-Route::get('persons/create', [PersonController::class, 'create'])->name('persons.create');
-
-Route::post('persons', [PersonController::class, 'store'])->name('persons.store');
-
-Route::get('persons/{person}', [PersonController::class, 'show'])->name('persons.show');
-
-Route::get('persons/{person}/edit', [PersonController::class, 'edit'])->name('persons.edit');
-
-Route::patch('persons/{person}', [PersonController::class, 'update'])->name('persons.update');
-
-Route::delete('persons/{person}', [PersonController::class, 'destroy'])->name('persons.destroy');
 
 //onderstaande routes zijn tijdelijke routes naar de blades
 
@@ -82,7 +66,13 @@ Route::get('frontend/index', function () {
 Route::get('frontend/app', function () {
     return view('frontend.app');
 });
-Route::get('frontend/body/featured', function () {
+Route::get('frontend/category', function() {
+    return view('frontend.category');
+});
+Route::get('frontend/shop-page', function() {
+    return view('frontend.shop-page');
+});
+Route::get('frontend/body/featured', function() {
     return view('frontend.body.featured');
 });
 Route::get('frontend/body/footer', function () {

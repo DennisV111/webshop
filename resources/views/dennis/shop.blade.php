@@ -8,13 +8,9 @@
     </div>
     <br>
     <br>
-    {{-- <nav>
-        <a href="{{ route('items.create') }}">Add item</a>
-    </nav>
-    <br>
-    <nav>
-        <a href="{{ route('home') }}">Back to home page</a>
-    </nav> --}}
+    
+    @include('dennis.filters')
+
     <div>
         <table>
             <tr>

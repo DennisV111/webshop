@@ -21,11 +21,14 @@ class Item extends Model
     public function item_stock() {
          return $this->belongsTo('\App\Models\ItemStock');
     }
+    
     public function item_category() {
          return $this->belongsTo('\App\Models\ItemCategory');
     }
+    
     public function reviews()
     {
         return $this->hasMany('\App\Models\Review');
     }
+
 }
