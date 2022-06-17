@@ -39,6 +39,7 @@
                                                     <div class="row">
                                                         <div class="col-sm-12 col-md-3">
                                                             <ul class="links list-unstyled">
+
                                                                 <li>
                                                                     <a href="#">Architectural Structure & Design</a>
                                                                 </li>
@@ -101,11 +102,11 @@
                                             </span>
                                             <input type="text" id="amount"
                                                 style="
-                                                                                                                                            border: 0;
-                                                                                                                                            color: #666666;
-                                                                                                                                            font-weight: bold;
-                                                                                                                                            text-align: center;
-                                                                                                                                        " />
+                                                                                                                                                                                                                        border: 0;
+                                                                                                                                                                                                                        color: #666666;
+                                                                                                                                                                                                                        font-weight: bold;
+                                                                                                                                                                                                                        text-align: center;
+                                                                                                                                                                                                                    " />
                                             <input type="text" class="price-slider" value="" />
                                         </div>
                                         <!-- /.price-range-holder -->
@@ -120,16 +121,14 @@
 
                                 <div class="sidebar-widget wow fadeInUp">
                                     <div class="widget-header">
-                                        <h4 class="widget-title">AUTHERS</h4>
+                                        <h4 class="widget-title">AUTHORS</h4>
                                     </div>
                                     <div class="sidebar-widget-body">
                                         <ul class="list">
-                                            <li><a href="#">Reese Miller</a></li>
-                                            <li><a href="#">Martin Walters</a></li>
-                                            <li><a href="#">Amelia Pond</a></li>
-                                            <li><a href="#">Tanya J. Pridmore</a></li>
-                                            <li><a href="#">Peter Patterson</a></li>
-                                            <li><a href="#">James Lopez</a></li>
+                                            @foreach ($authors as $author)
+                                                <li style="color: black"><a href="">{{ $author->author }}</a>
+                                                </li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                     <!-- /.sidebar-widget-body -->
@@ -231,10 +230,6 @@
                                                 <a data-toggle="tab" href="#grid-container"><i
                                                         class="icon fa fa-th-large"></i>Grid</a>
                                             </li>
-                                            <li>
-                                                <a data-toggle="tab" href="#list-container"><i
-                                                        class="icon fa fa-th-list"></i>List</a>
-                                            </li>
                                         </ul>
                                     </div>
                                     <!-- /.filter-tabs -->
@@ -271,55 +266,8 @@
                                         <!-- /.lbl-cnt -->
                                     </div>
                                     <!-- /.col -->
-                                    <div class="col col-sm-3 col-md-6 no-padding">
-                                        <div class="lbl-cnt">
-                                            <span class="lbl">Show</span>
-                                            <div class="fld inline">
-                                                <div class="dropdown dropdown-small dropdown-med dropdown-white inline">
-                                                    <button data-toggle="dropdown" type="button"
-                                                        class="btn dropdown-toggle">
-                                                        1 <span class="caret"></span>
-                                                    </button>
-                                                    <ul role="menu" class="dropdown-menu">
-                                                        <li role="presentation"><a href="#">1</a></li>
-                                                        <li role="presentation"><a href="#">2</a></li>
-                                                        <li role="presentation"><a href="#">3</a></li>
-                                                        <li role="presentation"><a href="#">4</a></li>
-                                                        <li role="presentation"><a href="#">5</a></li>
-                                                        <li role="presentation"><a href="#">6</a></li>
-                                                        <li role="presentation"><a href="#">7</a></li>
-                                                        <li role="presentation"><a href="#">8</a></li>
-                                                        <li role="presentation"><a href="#">9</a></li>
-                                                        <li role="presentation"><a href="#">10</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <!-- /.fld -->
-                                        </div>
-                                        <!-- /.lbl-cnt -->
-                                    </div>
-                                    <!-- /.col -->
+
                                 </div>
-                                <!-- /.col -->
-                                <div class="col col-sm-6 col-md-4 text-right">
-                                    <div class="pagination-container">
-                                        <ul class="list-inline list-unstyled">
-                                            <li class="prev">
-                                                <a href="#"><i class="fa fa-angle-left"></i></a>
-                                            </li>
-                                            <li><a href="#">1</a></li>
-                                            <li class="active"><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#">4</a></li>
-                                            <li class="next">
-                                                <a href="#"><i class="fa fa-angle-right"></i></a>
-                                            </li>
-                                        </ul>
-                                        <!-- /.list-inline -->
-                                    </div>
-                                    <!-- /.pagination-container -->
-                                </div>
-                                <!-- /.col -->
                             </div>
                             <!-- /.row -->
                         </div>
@@ -396,41 +344,7 @@
 
 
 
-                                            <div class="product-info text-left">
-                                                <h3 class="name">
-                                                    <a href="detail.html">Shooting Portraits In Black And
-                                                        White</a>
-                                                </h3>
-                                                <div class="rating rateit-small"></div>
-                                                <div class="description"></div>
-                                                <div class="product-price">
-                                                    <span class="price"> $45.99 </span>
-                                                    <span class="price-before-discount">$ 80</span>
-                                                </div>
-                                                <!-- /.product-price -->
-                                            </div>
                                             <!-- /.product-info -->
-                                            <div class="cart clearfix animate-effect">
-                                                <div class="action">
-                                                    <ul class="list-unstyled">
-                                                        <li class="add-cart-button btn-group">
-                                                            <button class="btn btn-primary icon" data-toggle="dropdown"
-                                                                type="button">
-                                                                <i class="fa fa-shopping-cart"></i>
-                                                            </button>
-                                                            <button class="btn btn-primary cart-btn" type="button">
-                                                                Add to cart
-                                                            </button>
-                                                        </li>
-                                                        <li class="lnk wishlist">
-                                                            <a class="add-to-cart" href="detail.html" title="Wishlist">
-                                                                <i class="icon fa fa-heart"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <!-- /.action -->
-                                            </div>
                                             <!-- /.cart -->
                                         </div>
                                         <!-- /.product -->
@@ -439,63 +353,6 @@
                                 </div>
                                 <!-- /.item -->
 
-                                <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                    <div class="products">
-                                        <div class="product">
-                                            <div class="product-image">
-                                                <div class="image">
-                                                    <a href="detail.html"><img src="img/Photography/Photography9.jpg"
-                                                            alt="" /></a>
-                                                </div>
-                                                <!-- /.image -->
-
-                                                <div class="tag hot"><span>hot</span></div>
-                                            </div>
-                                            <!-- /.product-image -->
-
-                                            <div class="product-info text-left">
-                                                <h3 class="name">
-                                                    <a href="detail.html">50 Of The World's Iconic Snapshots</a>
-                                                </h3>
-                                                <div class="rating rateit-small"></div>
-                                                <div class="description"></div>
-                                                <div class="product-price">
-                                                    <span class="price"> $45.99 </span>
-                                                    <span class="price-before-discount">$ 80</span>
-                                                </div>
-                                                <!-- /.product-price -->
-                                            </div>
-                                            <!-- /.product-info -->
-                                            <div class="cart clearfix animate-effect">
-                                                <div class="action">
-                                                    <ul class="list-unstyled">
-                                                        <li class="add-cart-button btn-group">
-                                                            <button class="btn btn-primary icon" data-toggle="dropdown"
-                                                                type="button">
-                                                                <i class="fa fa-shopping-cart"></i>
-                                                            </button>
-                                                            <button class="btn btn-primary cart-btn" type="button">
-                                                                Add to cart
-                                                            </button>
-                                                        </li>
-                                                        <li class="lnk wishlist">
-                                                            <a class="add-to-cart" href="detail.html" title="Wishlist">
-                                                                <i class="icon fa fa-heart"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <!-- /.action -->
-                                            </div>
-                                            <!-- /.cart -->
-                                        </div>
-                                        <!-- /.product -->
-                                    </div>
-                                    <!-- /.products -->
-                                </div>
-                                <!-- /.item -->
-
-                                <!-- /.item -->
 
                             </div>
                             <!-- /.row -->
@@ -504,106 +361,9 @@
                     </div>
                     <!-- /.tab-pane -->
 
-                    <div class="tab-pane" id="list-container">
-                        <div class="category-product">
-                            <div class="category-product-inner wow fadeInUp">
-                                <div class="products">
-                                    <div class="product-list product">
-                                        <div class="row product-list-row">
-                                            <div class="col col-sm-4 col-lg-4">
-                                                <div class="product-image">
-                                                    <div class="image">
-                                                        <img src="img/Photography/Photography9.jpg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <!-- /.product-image -->
-                                            </div>
-                                            <!-- /.col -->
-                                            <div class="col col-sm-8 col-lg-8">
-                                                <div class="product-info">
-                                                    <h3 class="name">
-                                                        <a href="detail.html">50 Of The World's Iconic
-                                                            Snapshots</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="product-price">
-                                                        <span class="price"> $45.99 </span>
-                                                        <span class="price-before-discount">$ 80</span>
-                                                    </div>
-                                                    <!-- /.product-price -->
-                                                    <div class="description m-t-10">
-                                                        Suspendisse posuere arcu diam, id accumsan
-                                                        eros pharetra ac. Nulla enim risus, facilisis
-                                                        bibendum gravida eget, lacinia id purus.
-                                                        Suspendisse posuere arcu diam, id accumsan
-                                                        eros pharetra ac. Nulla enim risus, facilisis
-                                                        bibendum gravida eget.
-                                                    </div>
-                                                    <div class="cart clearfix animate-effect">
-                                                        <div class="action">
-                                                            <ul class="list-unstyled">
-                                                                <li class="add-cart-button btn-group">
-                                                                    <button class="btn btn-primary icon"
-                                                                        data-toggle="dropdown" type="button">
-                                                                        <i class="fa fa-shopping-cart"></i>
-                                                                    </button>
-                                                                    <button class="btn btn-primary cart-btn" type="button">
-                                                                        Add to cart
-                                                                    </button>
-                                                                </li>
-                                                                <li class="lnk wishlist">
-                                                                    <a class="add-to-cart" href="detail.html"
-                                                                        title="Wishlist">
-                                                                        <i class="icon fa fa-heart"></i>
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <!-- /.action -->
-                                                    </div>
-                                                    <!-- /.cart -->
-                                                </div>
-                                                <!-- /.product-info -->
-                                            </div>
-                                            <!-- /.col -->
-                                        </div>
-                                        <!-- /.product-list-row -->
-                                        <div class="tag new"><span>new</span></div>
-                                    </div>
-                                    <!-- /.product-list -->
-                                </div>
-                                <!-- /.products -->
-                            </div>
-                            <!-- /.category-product-inner -->
 
-                        </div>
-                        <!-- /.category-product -->
-                    </div>
-                    <!-- /.tab-pane #list-container -->
                 </div>
                 <!-- /.tab-content -->
-                <div class="clearfix filters-container">
-                    <div class="text-right">
-                        <div class="pagination-container">
-                            <ul class="list-inline list-unstyled">
-                                <li class="prev">
-                                    <a href="#"><i class="fa fa-angle-left"></i></a>
-                                </li>
-                                <li><a href="#">1</a></li>
-                                <li class="active"><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li class="next">
-                                    <a href="#"><i class="fa fa-angle-right"></i></a>
-                                </li>
-                            </ul>
-                            <!-- /.list-inline -->
-                        </div>
-                        <!-- /.pagination-container -->
-                    </div>
-                    <!-- /.text-right -->
-                </div>
-                <!-- /.filters-container -->
             </div>
             <!-- /.search-result-container -->
         </div>

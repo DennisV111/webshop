@@ -10,10 +10,11 @@ class ItemStock extends Model
     use HasFactory;
 
     protected $table = 'item_stocks';
-    
+
     protected $guarded = ['id'];
 
-    public function item() {
-         return $this->hasOne('\App\Models\Item');
+    public function item()
+    {
+        return $this->hasOne('\App\Models\Item');
     }
 }

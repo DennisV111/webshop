@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/assets/css/blue.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/assets/css/bootstrap-select.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/assets/css/main.css') }}" />
-    {{-- <link rel="stylesheet" href="{{ asset('frontend/assets/assets/css/lightbox.css') }}" /> --}}
+    <link rel="stylesheet" href="{{ asset('frontend/assets/assets/css/lightbox.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/assets/css/owl.carousel.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/assets/css/owl.transitions.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/assets/css/rateit.css') }}" />
@@ -48,6 +48,10 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/shipping.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/featured.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/items.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/category.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/shoppingCart.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/detail.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/details.css') }}">
     {{-- <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}"> --}}
 
     <link rel="stylesheet" href="{{ asset('frontend/assets/assets/css/font-awesome.css') }}" />
@@ -76,7 +80,7 @@
 
     </main>
 
-    @include('frontend.body.featured')
+
 
 
 
@@ -106,6 +110,7 @@
     <script src="{{ asset('frontend/assets/assets/js/bootstrap-select.min.js') }}"></script>
     <script src="{{ asset('frontend/assets/assets/js/wow.min.js') }}"></script>
     <script src="{{ asset('frontend/assets/assets/js/scripts.js') }}"></script>
+
 
 
 </body>

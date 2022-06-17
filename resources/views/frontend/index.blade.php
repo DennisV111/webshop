@@ -76,5 +76,34 @@
         </div>
     </section>
 
+    <section class="featured" id="featured">
+        <h1 class="heading"><span>featured books</span> </h1>
+
+
+        <div class="featured-slider">
+            @foreach ($featuredBooks as $item)
+                <div class="wrapper">
+
+                    <div class="box-book">
+                        <div class="icons">
+                            <a href="#" class="fas fa-search"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="{{ route('item.showDetailPage', $item->title) }}" class="fas fa-eye"></a>
+                        </div>
+                        <div class="image">
+                            <span class="discount-tag">50% off</span>
+                            <img src="{{ asset('frontend/assets/img/' . $item->image_name) }}" alt="">
+                        </div>
+                        <div class="content">
+                            <h5>{{ $item->title }}</h5>
+                            <div class="price">&euro;15 <span class="actual-price">{{ $item->price }}</span></div>
+                            <a href="#" class="btn">add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </section>
+
     <!-- Shipping End -->
 @endsection

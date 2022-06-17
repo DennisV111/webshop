@@ -40,9 +40,6 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 Route::get('items', [ItemController::class, 'index'])->name('items.index');
 
-Route::get('frontend/category', [ItemCategoryController::class, 'showCategoryPage'])->name('itemcategory.index');
-
-Route::get('frontend/shop-page', [DennisController::class, 'index'])->name('dennis.index');
 
 Route::resource('admin/items', ItemController::class)->names('admin.items');
 
@@ -66,29 +63,30 @@ Route::get('frontend/index', function () {
 Route::get('frontend/app', function () {
     return view('frontend.app');
 });
-Route::get('frontend/category', function() {
-    return view('frontend.category');
-});
-Route::get('frontend/shop-page', function() {
-    return view('frontend.shop-page');
-});
-Route::get('frontend/body/featured', function() {
-    return view('frontend.body.featured');
-});
+
+
 Route::get('frontend/body/footer', function () {
     return view('frontend.body.footer');
 });
 Route::get('frontend/body/header', function () {
     return view('frontend.body.header');
 });
-Route::get('frontend/book-details/detail', function () {
-    return view('frontend.book_details.detail');
-});
 
 
-//Frontend Item Details
 
-// Route::get('frontend/category', [ItemCategoryController::class, 'categoryPagination'])->name('itemCategory.categoryPagination');
+// Used Routes For Frontend Controller
+
+Route::get('frontend/category', [ItemCategoryController::class, 'showCategoryPage'])->name('itemcategory.showCategoryPage');
+
+Route::get('frontend/shop-page', [ItemController::class, 'showItemPage'])->name('item.showItemPage');
+
+Route::get('frontend/shop-page/{detail}', [ItemController::class, 'showDetailPage'])->name('item.showDetailPage');
+
+Route::get('/', [HomeController::class, 'featuredItems'])->name('home.featuredItems');
 
 
-// Route::get('frontend/category', [ItemCategoryController::class, 'categoryPagination'])->name('category.categoryPagination');
+Route::get('basket', [ItemController::class, 'basket']);
+Route::get('add-to-basket/{id}', [ItemController::class, 'addToCart']);
+
+Route::patch('update-basket', 'ItemsController@updateCart');
+Route::delete('remove-from-basket', 'ItemsController@remove');

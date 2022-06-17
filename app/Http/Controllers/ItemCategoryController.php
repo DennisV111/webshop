@@ -93,10 +93,14 @@ class ItemCategoryController extends Controller
     {
         $item_categories = ItemCategory::all();
         $items = Item::paginate(12);
+        $authors = Item::paginate(6);
+
 
         return view('frontend.category')->with([
             'items' =>  $items,
-            'item_categories' => $item_categories
+            'item_categories' => $item_categories,
+            'authors' => $authors,
+
         ]);
     }
 }
