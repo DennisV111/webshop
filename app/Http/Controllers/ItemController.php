@@ -5,8 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Item;
+use App\Models\Category;
+use App\Models\ProductStock;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 
 
 class ItemController extends Controller
@@ -18,10 +21,15 @@ class ItemController extends Controller
      */
     public function index()
     {
-        //$items = Item::all();
-        $items = Item::with('item_category')->get();
+        //$items = Item::with('stock')->get();
+        $items = Item::all();
 
-        $indexAttributes = ['title', 'author', 'isbn', 'item_category->name', 'stock_id'];
+        //$columns = Schema::getColumnListing(['items','category']);
+        //$moreColumns = Schema::getColumnListing('categories');
+        //$indexAttributes = array_merge($columns, $moreColumns);
+        //$indexAttributes = ['title','author','isbn' , 'category->name', 'stock_id'];
+
+        return view('admin.items.index', compact('items'));
 
         return view('admin.items.index', compact('items', 'indexAttributes'));
     }
@@ -33,7 +41,9 @@ class ItemController extends Controller
      */
     public function create()
     {
-        return view('admin.items.create');
+        $categories = Category::all();
+
+        return view('admin.items.create', compact('categories'));
     }
 
     /**
@@ -45,11 +55,10 @@ class ItemController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'item_category_id' => 'required',
-            'stock_id' => 'required',
-            'title' => 'required|max:60',
+            'title' => 'required|max:100',
             'author' => 'required|max:60',
-            'description' => 'required|max:60',
+            'category_id' => 'required',
+            'description' => 'required',
             'language' => 'required|max:60',
             'isbn' => 'required|max:20',
             'dimensions' => 'required|max:60',
@@ -60,9 +69,20 @@ class ItemController extends Controller
             'price' => 'required',
             'vat' => 'required'
         ]);
-        $item = Item::create($validatedData);
 
-        return redirect('/items');
+        $item = Item::create($validatedData);
+        //aanmaken stock
+        // $table->increments('id');
+        //     $table->unsignedInteger('item_id');
+        //     $table->foreign('item_id')->references('id')->on('items');
+        //     $table->integer('amount')->default(1);
+
+
+        $stock = ProductStock::create(['item_id' => $item->id, 'amount' => 0 ]);
+
+        //dd($stock);
+
+        return redirect('/admin/items');
     }
 
     /**
@@ -74,11 +94,12 @@ class ItemController extends Controller
     public function show($id)
     {
         $item = Item::findOrFail($id);
+        //$items = Item::with('stock')->get();
+      
+        //$attributes = array_keys($item->toArray());
+        //$showTableAttributes = array_slice($attributes, 0, count($attributes)-2);
 
-        $attributes = array_keys($item->toArray());
-        $showTableAttributes = array_slice($attributes, 0, count($attributes) - 2);
-
-        return view('admin.items.show', compact('item', 'showTableAttributes'));
+        return view('admin.items.show', compact('item'));
     }
 
     /**

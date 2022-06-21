@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class ItemCategorySeeder extends Seeder
+class CategorySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,7 +14,7 @@ class ItemCategorySeeder extends Seeder
      */
     public function run()
     {
-        $item_categories = [
+        $categories = [
             'Architect',
             'Photography',
             'Graphic Design',
@@ -25,8 +25,8 @@ class ItemCategorySeeder extends Seeder
             'Business',
         ];
 
-        foreach ($item_categories as $category) {
-            \App\Models\ItemCategory::create([
+        foreach ($categories as $category) {
+            \App\Models\Category::create([
                 'name'  => $category
             ]);
         }

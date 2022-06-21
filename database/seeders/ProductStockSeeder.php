@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class ItemStockSeeder extends Seeder
+class ProductStockSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,14 +14,13 @@ class ItemStockSeeder extends Seeder
      */
     public function run()
     {
-
-        $maxNumberOfItems = 200;
+        $maxNumberOfItems = 77;
 
         for ($i=1; $i<=$maxNumberOfItems; $i++) {
-            \App\Models\ItemStock::create([
-                'stock'  => 0
+            \App\Models\ProductStock::create([
+                'amount'  => random_int(1,30),
+                'item_id' => $i,
             ]);
         }
-
     }
 }

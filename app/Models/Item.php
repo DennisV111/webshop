@@ -20,14 +20,12 @@ class Item extends Model
         return $this->hasMany('\App\Models\OrderItem');
     }
 
-    public function item_stock()
-    {
-        return $this->belongsTo('\App\Models\ItemStock');
+    public function product_stock() {
+         return $this->hasOne('\App\Models\ProductStock');
     }
-
-    public function item_category()
-    {
-        return $this->belongsTo('\App\Models\ItemCategory');
+    
+    public function category() {
+         return $this->belongsTo('\App\Models\Category');
     }
 
     public function reviews()

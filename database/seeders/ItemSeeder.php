@@ -18,8 +18,8 @@ class ItemSeeder extends Seeder
         
         DB::table('items')->insert([
             'title'         => 'Financial Literacy 101',
-            'item_category_id'   => 8,
-            'stock_id'      => 1,
+            'category_id'   => 8,
+            //       => 1,
             'author'        => 'Reese Miller',
             'description'   => 'Financial literacy is the ability to understand and effectively use various financial skills, including personal financial management, budgeting, and investing. Financial literacy is the foundation of your relationship with money, and it is a lifelong journey of learning.',
             'image_name'    => 'Business1.jpg',
@@ -34,8 +34,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Concepts, Clients, & Creation',
-            'item_category_id'   => 8,
-            'stock_id'      => 2,
+            'category_id'   => 8,
+            //       => 2,
             'author'        => 'Katie Thompson',
             'description'   => 'Concept creation is a detailed process based on research and experience. We take this seriously and produce in-depth and fully detailed concepts taking into account UI and UX at the heart of everything we produce.',
             'image_name'    => 'Business2.jpg',
@@ -50,8 +50,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Nowhere To Go But Up',
-            'item_category_id'   => 8,
-            'stock_id'      => 3,
+            'category_id'   => 8,
+            //       => 3,
             'author'        => 'Peter L. McGrew',
             'description'   => 'Business growth can be achieved either by boosting the top line or revenue of the business.',
             'image_name'    => 'Business3.jpg',
@@ -66,8 +66,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Creative Business Startup',
-            'item_category_id'   => 8,
-            'stock_id'      => 4,
+            'category_id'   => 8,
+            //       => 4,
             'author'        => 'Shoo Thar Mhin',
             'description'   => 'In the current Digital and Advanced Era, many new startups have arrived and are competing, so in order for your startup to progress, this book is suitable for you.',
             'image_name'    => 'Business4.jpg',
@@ -82,8 +82,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'A to Z Of Business',
-            'item_category_id'   => 8,
-            'stock_id'      => 5,
+            'category_id'   => 8,
+            //       => 5,
             'author'        => 'Derk Ford',
             'description'   => 'If you own a small business, you have likely heard how important having at least a simple, basic website can be, but actually creating a website can feel overwhelming. With the wide range of tools and solutions on the market today, getting your business online no longer requires knowing how to code or spending thousands of dollars.',
             'image_name'    => 'Business5.jpg',
@@ -98,8 +98,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Lift To The Top',
-            'item_category_id'   => 8,
-            'stock_id'      => 6,
+            'category_id'   => 8,
+            //       => 6,
             'author'        => 'Gordon Herald',
             'description'   => 'Stop Working for Others, Build your Own Empire and Dominate Industry with NIBAV Home Lift. Australian Home Lift Company, Looking for Business Partners in Netherlands. No Pit Required. Light Weight. 90-180° Degree Doors. Zero Civil Work. 100% Value For Money. Maximum Space Utilization.',
             'image_name'    => 'Business6.jpg',
@@ -114,8 +114,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Business-Savvy Creatives',
-            'item_category_id'   => 8,
-            'stock_id'      => 7,
+            'category_id'   => 8,
+            //       => 7,
             'author'        => 'Mariana Napolitani',
             'description'   => 'How To Become An Entrepreneurs Results from 6 Web Search Engines. Search How To Become An Entrepreneurs. Look Up Quick Results on ZapMeta. 100+ Million Visitors. Trusted by Millions. Information 24/7. Wiki, News & More. Web, Images & Video. The Complete Overview. Types: Trusted Sources, Immediate Search Results, Search Multiple Sources, Expert Advice and Content.',
             'image_name'    => 'Business7.jpg',
@@ -130,8 +130,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Effective Typography For Small Businesses',
-            'item_category_id'   => 8,
-            'stock_id'      => 8,
+            'category_id'   => 8,
+            //       => 8,
             'author'        => 'George Stewart',
             'description'   => 'Countless features that help you save time, so you can focus on growing your business. Built to save you time, so you can focus on what truly matters: your business. Compare Plans.',
             'image_name'    => 'Business8.jpg',
@@ -146,8 +146,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Journey To The Stars',
-            'item_category_id'   => 5,
-            'stock_id'      => 9,
+            'category_id'   => 5,
+            //       => 9,
             'author'        => 'Matt Zhang',
             'description'   => 'All that remains of the star is a very dense object called a white dwarf. It will take billions of years to cool and slowly fade away. Brown dwarfs are neither stars nor planets. And they are as numerous as stars! The discovery of these new objects tells us that our cosmic family is more diverse than we imagined.',
             'image_name'    => 'Children1.jpg',
@@ -162,8 +162,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'The Tale Of Monster Falls',
-            'item_category_id'   => 5,
-            'stock_id'      => 10,
+            'category_id'   => 5,
+            //       => 10,
             'author'        => 'Yael Amari',
             'description'   => 'A Land of Elements Lies Before You, Begin an Unforgettable Journey to Unveil Its Secrets. Faster Load Times. Intense Action RPG Combat. Fully Localized. Breathtaking Graphics. Free to Play.A Land of Elements Lies Before You, Begin an Unforgettable Journey to Unveil Its Secrets. Faster Load Times. Intense Action RPG Combat. Fully Localized. Breathtaking Graphics. Free to Play.',
             'image_name'    => 'Children2.jpg',
@@ -178,8 +178,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Lost In Jungle',
-            'item_category_id'   => 5,
-            'stock_id'      => 11,
+            'category_id'   => 5,
+            //       => 11,
             'author'        => 'Harumi Kobayashi',
             'description'   => 'Lost in the Jungle Four young men went into the jungle on the adventure of a lifetime. Only two of them would come out alive… The Amazon rainforest is roughly the size of Europe or Australia. It is the home of more than half the plant and animal species known to man, many of which are lethal. In 1981 three friends went backpacking in a remote',
             'image_name'    => 'Children3.jpg',
@@ -194,8 +194,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'The Adventures Of Lily',
-            'item_category_id'   => 5,
-            'stock_id'      => 12,
+            'category_id'   => 5,
+            //       => 12,
             'author'        => 'Adele Williams',
             'description'   => 'These are the adventures of Lily and LuLu. Lily is a lab mix puppy adopted at 10 weeks from Operation Paws for Homes, and LuLu, 4, also a lab mix, is living with her "grandparents" while her parents move out of the country for their jobs.',
             'image_name'    => 'Children4.jpg',
@@ -210,8 +210,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'How Nelly Saved the Circus',
-            'item_category_id'   => 5,
-            'stock_id'      => 13,
+            'category_id'   => 5,
+            //       => 13,
             'author'        => 'Matt Zhang',
             'description'   => 'How Nelly Saved Her Money: 52 Week Budgeting book. 8.5x11”. Budget your money monthly, weekly, daily for a year! Financial Planner and Organizer Journal : Lee, Annie: Amazon.sg: items',
             'image_name'    => 'Children5.jpg',
@@ -226,8 +226,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Journey To The Stars',
-            'item_category_id'   => 5,
-            'stock_id'      => 14,
+            'category_id'   => 5,
+            //       => 14,
             'author'        => 'Matt Zhang',
             'description'   => 'All that remains of the star is a very dense object called a white dwarf. It will take billions of years to cool and slowly fade away. Brown dwarfs are neither stars nor planets. And they are as numerous as stars! The discovery of these new objects tells us that our cosmic family is more diverse than we imagined.',
             'image_name'    => 'Children6.jpg',
@@ -242,8 +242,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Hoot The owls Of Hocking Hills',
-            'item_category_id'   => 5,
-            'stock_id'      => 15,
+            'category_id'   => 5,
+            //       => 15,
             'author'        => 'Brad Furman',
             'description'   => 'The sounds of hoot owls will lull you to sleep and when you wake, enjoy the stained glass glow through the beautiful tipi. We are close to several wineries, breweries and recreational areas (canoeing, golfing, biking) as well as Legend Valley concert venue. We are a short drive to Buckeye Lake, Dillion Dam, and Hocking Hills.',
             'image_name'    => 'Children7.jpg',
@@ -258,8 +258,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Amara The Brave',
-            'item_category_id'   => 5,
-            'stock_id'      => 16,
+            'category_id'   => 5,
+            //       => 16,
             'author'        => 'Matt Zhang',
             'description'   => 'The Brave is the debut novel from filmmaker James Bird. The main character, Collin, is someone that we can all relate to. The journey he takes us on & the lessons we learn along with him are priceless. In a world where you can be anything, be brave.',
             'image_name'    => 'Children8.jpg',
@@ -274,8 +274,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'The Happy Lemon',
-            'item_category_id'   => 5,
-            'stock_id'      => 17,
+            'category_id'   => 5,
+            //       => 17,
             'author'        => 'Serene Wright',
             'description'   => 'The Happy Lemon Project is our effort to alleviate this problem, if even for one day. We hope to show that genuine connections are as easy to make as those on the internet, and that they are often healthier. It is discouraging that electronic connection trumps the real.',
             'image_name'    => 'Children9.jpg',
@@ -290,8 +290,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Logo Design',
-            'item_category_id'   => 3,
-            'stock_id'      => 18,
+            'category_id'   => 3,
+            //       => 18,
             'author'        => 'Shoo Thar Mhien',
             'description'   => 'Logo design is the art of creating a visually stunning mark for a brand or company. A logo usually consists of a symbol, brandmark, or image that represents or symbolizes the company. a logo should stand out and be easily recognized.',
             'image_name'    => 'GraphicDesign1.jpg',
@@ -306,8 +306,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'The Service Of Design',
-            'item_category_id'   => 3,
-            'stock_id'      => 19,
+            'category_id'   => 3,
+            //       => 19,
             'author'        => 'Shoo Khier Mhan',
             'description'   => 'The Design Service provides a personalisd service creating luxury, bespoke residential interior design across Surrey, Hampshire, Berkshire and the South. The Design Service and their talented team of interior designers provide a personalised service giving you the luxury finish suited to you and your tastes.',
             'image_name'    => 'GraphicDesign2.jpg',
@@ -322,8 +322,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'A Design Guid: understanding each layer',
-            'item_category_id'   => 3,
-            'stock_id'      => 20,
+            'category_id'   => 3,
+            //       => 20,
             'author'        => 'Paul Parker',
             'description'   => 'he three layers in a DDD microservice like Ordering. Each layer is a VS project: Application layer is Ordering.API, Domain layer is Ordering.Domain and the Infrastructure layer is Ordering.Infrastructure. You want to design the system so that each layer communicates only with certain other layers.',
             'image_name'    => 'GraphicDesign3.jpg',
@@ -338,8 +338,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Feminism In Graphic Design',
-            'item_category_id'   => 3,
-            'stock_id'      => 21,
+            'category_id'   => 3,
+            //       => 21,
             'author'        => 'Jennifer Jones',
             'description'   => 'The biannual magazine Le Signe Design (LSD) is a periodical platform for production, distribution, creative support, dialogue, and mediation between the artistic field of graphic design and the public. This first issue explores the relationship between graphic design and feminism.',
             'image_name'    => 'GraphicDesign4.jpg',
@@ -354,8 +354,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => "Conquering Designer's Block",
-            'item_category_id'   => 3,
-            'stock_id'      => 22,
+            'category_id'   => 3,
+            //       => 22,
             'author'        => 'Susan Miller AND Mark Allen',
             'description'   => 'Follow these 20 quick-fire to get your creative juices flowing again. 01. Tap into your subconscious. Shotopop took an imaginative approach in this Clarks Originals campaign. "Strange things happen in a semi-sleep state, when your unconscious takes over," says Shotopop Casper Franken. "Wake up and write down whatever was happening before you .',
             'image_name'    => 'GraphicDesign5.jpg',
@@ -370,8 +370,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'The Journey',
-            'item_category_id'   => 3,
-            'stock_id'      => 23,
+            'category_id'   => 3,
+            //       => 23,
             'author'        => 'Shawn Garcia',
             'description'   => 'n order to help you on your journey to success we created this guide to the best elegant and simple attention-grabbing fonts. why typography is so important.',
             'image_name'    => 'GraphicDesign6.jpg',
@@ -386,8 +386,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Color Theory For Beginners',
-            'item_category_id'   => 3,
-            'stock_id'      => 24,
+            'category_id'   => 3,
+            //       => 24,
             'author'        => 'Jennifer Jones',
             'description'   => 'Best items on Color Theory. Here is my roundup of the best items on color theory for designers, graphic designers and artists! Let’s dive in. Interaction of Color: 50th Anniversary Edition. Color: A Natural History of the Palette. The Secret Lives of Color. Secret Language of Color.',
             'image_name'    => 'GraphicDesign7.jpg',
@@ -402,8 +402,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'The Lost Love',
-            'item_category_id'   => 4,
-            'stock_id'      => 25,
+            'category_id'   => 4,
+            //       => 25,
             'author'        => 'Helene Paquet',
             'description'   => 'It is always hard to lose someone we love and suicide can often feel like a shocking blow to the soul as well as an emotional loss. If you knew the person who died by suicide, it’s important to understand what the family is going through at the time and be sensitive to those feelings.',
             'image_name'    => 'Novel1.jpg',
@@ -418,8 +418,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'The Dark Side Of Winter',
-            'item_category_id'   => 4,
-            'stock_id'      => 26,
+            'category_id'   => 4,
+            //       => 26,
             'author'        => 'Morgan Maxwell',
             'description'   => 'Big Winter: After a nuclear war, dust and soot may blanket the Earth Oh, and that is just the beginning of your Winter out of Hell. Slowly, particle-by-particle, the soot will begin to fall back to the Earth.',
             'image_name'    => 'Novel2.jpg',
@@ -434,8 +434,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Secrets',
-            'item_category_id'   => 4,
-            'stock_id'      => 27,
+            'category_id'   => 4,
+            //       => 27,
             'author'        => 'Harry Rickets',
             'description'   => 'Effective secrets management allows organizations to remove these hard-coded secrets from DevOps tools within the CI/CD pipeline while providing full audit trails, policy-based RBAC and secrets rotation. Secrets management to secure containers.',
             'image_name'    => 'Novel3.jpg',
@@ -450,8 +450,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'History Of Jungle Beast',
-            'item_category_id'   => 4,
-            'stock_id'      => 28,
+            'category_id'   => 4,
+            //       => 28,
             'author'        => 'Takehiro Kanegi',
             'description'   => '“The Beast in the Jungle” is a product of what critics call James’s third and final phase. Some consider this his richest phase; others find it flawed by excessive narrative and indirection ',
             'image_name'    => 'Novel4.jpg',
@@ -466,8 +466,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Travelling',
-            'item_category_id'   => 4,
-            'stock_id'      => 29,
+            'category_id'   => 4,
+            //       => 29,
             'author'        => 'Harry Rickets',
             'description'   => 'ravelling safely . Transport Scotland has produced guidance on travelling safely in all forms of transport. You can help keep Scotland moving by: reducing the need to travel: work from home or near home if you can; planning ahead: if you need to make a journey, check your travel options in advance',
             'image_name'    => 'Novel5.jpg',
@@ -482,8 +482,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Deeper Into Dreams',
-            'item_category_id'   => 4,
-            'stock_id'      => 30,
+            'category_id'   => 4,
+            //       => 30,
             'author'        => 'Noell Morrison',
             'description'   => 'Deeper into Dream by Ben Lee album reviews & Metacritic score: The eighth album from the Australian singer-songwriter was inspired by dreams and what they reveal to people about themselves.',
             'image_name'    => 'Novel6.jpg',
@@ -498,8 +498,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'The Watcher In The Woods',
-            'item_category_id'   => 4,
-            'stock_id'      => 31,
+            'category_id'   => 4,
+            //       => 31,
             'author'        => 'Martin Walters',
             'description'   => 'The Watcher in the Woods is a 1980 American [a] supernatural horror film [3] [4] directed by John Hough and Vincent McEveety and starring Bette Davis, Carroll Baker, Lynn-Holly Johnson, Kyle Richards, and David McCallum.',
             'image_name'    => 'Novel7.jpg',
@@ -514,8 +514,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'The Black Woods',
-            'item_category_id'   => 4,
-            'stock_id'      => 32,
+            'category_id'   => 4,
+            //       => 32,
             'author'        => 'William Wallburgh',
             'description'   => 'Black wood and glass volumes stagger down Oregon woodland to form Royal house. US architecture firm William Kaven Architecture has stepped a black house with expansive balconies down a wooded.',
             'image_name'    => 'Novel8.jpg',
@@ -530,8 +530,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'The Gift Of Love',
-            'item_category_id'   => 4,
-            'stock_id'      => 33,
+            'category_id'   => 4,
+            //       => 33,
             'author'        => 'Cassie Wright',
             'description'   => 'The Gift of Love is a 1968 compilation album by Jerry Butler on Sunset Records. The title track had already been issued as a single by The Temptations in October 1958. Having by 1968 racked up a number of charting singles and become known as a solo artist, Sunset reissued this collection of singles from their back catalogue.',
             'image_name'    => 'Novel9.jpg',
@@ -546,8 +546,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Sky is Neighborhood',
-            'item_category_id'   => 4,
-            'stock_id'      => 34,
+            'category_id'   => 4,
+            //       => 34,
             'author'        => 'Don Stroupe',
             'description'   => 'The sky is a neighborhood. Do not look now. Oh my dear heaven is a Big Bang now. Gotta get to sleep somehow. Bangin on the ceiling. Bangin on the ceiling. Keep it down. Oh my dearh eaven is a Big Bang now. Gotta get to sleep somehow.',
             'image_name'    => 'Novel10.jpg',
@@ -562,8 +562,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'The Tale Of The Mistaken Twin',
-            'item_category_id'   => 4,
-            'stock_id'      => 35,
+            'category_id'   => 4,
+            //       => 35,
             'author'        => 'Katie Thompson',
             'description'   => 'That being said, here is your city guide– nay, TWIN CITY guide to Budapest! The Fraternal City. Budapest is literally a tale of two cities; Buda and Pest. They are frequently regarded as twins, but they’re not necessarily alike. Did you know that there is a never-ending debate about which side of Budapest is better?',
             'image_name'    => 'Novel11.jpg',
@@ -578,8 +578,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Silent Women',
-            'item_category_id'   => 4,
-            'stock_id'      => 36,
+            'category_id'   => 4,
+            //       => 36,
             'author'        => 'Aileen Nedd',
             'description'   => 'This magisterial book offers comprehensive accounts of the professional itineraries of three women in the silent film in the Netherlands, France and North America. Annette Förster presents a careful assessment of the long career of Dutch stage and film actress Adriënne Solser; an exploration of the stage and screen careers of French actress and filmmaker Musidora and Canadian-born actress.',
             'image_name'    => 'Novel12.jpg',
@@ -594,8 +594,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'You Are My Angel',
-            'item_category_id'   => 4,
-            'stock_id'      => 37,
+            'category_id'   => 4,
+            //       => 37,
             'author'        => 'Francois Mercer',
             'description'   => 'You are my special angel. Through eternity. I will have my special angel. Here to watch over me. A smile from your lips brings the summer sunshine. The tears from your eyes bring the rain. I feel your touch, your warm embrace. And I am in heaven again. You are my special angel.',
             'image_name'    => 'Novel13.jpg',
@@ -610,8 +610,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Modern Distortions',
-            'item_category_id'   => 6,
-            'stock_id'      => 38,
+            'category_id'   => 6,
+            //       => 38,
             'author'        => 'Alexander Aronowitz',
             'description'   => 'While sectoral distortions generate no first-order loss in productive efficiency, they do produce first-order effects on the labor wedge. As distortions drive wedges between sectoral prices and marginal costs, the effects of these wedges compound as firms buy and sell from one another within the network of intermediate good trade.',
             'image_name'    => 'Philo1.jpg',
@@ -626,8 +626,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Self-Confident',
-            'item_category_id'   => 6,
-            'stock_id'      => 39,
+            'category_id'   => 6,
+            //       => 39,
             'author'        => 'Alexander Aronowitz',
             'description'   => 'To truly construct a solid foundation of self-confidence, we have to dig a little deeper. There are many positive, psychological steps we can take to feel good about ourselves. Most importantly, we have to do two things: 1. Challenge the inner critic we all possess and 2. Practice self-compassion.',
             'image_name'    => 'Philo2.jpg',
@@ -642,8 +642,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Benefits Of Mindfulness',
-            'item_category_id'   => 6,
-            'stock_id'      => 40,
+            'category_id'   => 6,
+            //       => 40,
             'author'        => 'Jacqueline Thompson',
             'description'   => 'Think specifically about the proven scientific benefits of mindfulness, leadership and mindful leadership. This may require some additional research. Explore Chapter 3 of your Mindful Leadership text (Gonzalez, 2012) and the article on the many Mindfulness Exercises you can try on your own.',
             'image_name'    => 'Philo3.jpg',
@@ -658,8 +658,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Futurama, Upgrade Your Brain Without Braking Your Mind',
-            'item_category_id'   => 6,
-            'stock_id'      => 41,
+            'category_id'   => 6,
+            //       => 41,
             'author'        => 'Michael Douglas JR.',
             'description'   => 'Futurama is set in New New York at the turn of the 31st century, in a time filled with technological wonders. The city of New New York has been built over the ruins of present-day New York City, which has become a catacomb-like space that acts as New New York is sewer, referred to as "Old New York".',
             'image_name'    => 'Philo4.jpg',
@@ -674,8 +674,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Into The Mind Of A Child Genius',
-            'item_category_id'   => 6,
-            'stock_id'      => 42,
+            'category_id'   => 6,
+            //       => 42,
             'author'        => 'Andrei Gaff',
             'description'   => 'Gifted Children. Nextory biedt meer dan 250.000 luisterboeken en e-items. Luister en lees zoveel je wilt. Online & Offline. Kinderboeken. Probeer 30 dagen gratis. Spanning. Misdaad en mysteriefictie. Read and listen unlimited. Cancel anytime.',
             'image_name'    => 'Philo5.jpg',
@@ -690,8 +690,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Think Outside The Box',
-            'item_category_id'   => 6,
-            'stock_id'      => 43,
+            'category_id'   => 6,
+            //       => 43,
             'author'        => 'Amelia Pond',
             'description'   => 'Synonyms for think outside the box include think creatively, think divergently, think laterally, think revolutionarily and think unconventionally.',
             'image_name'    => 'Philo6.jpg',
@@ -706,8 +706,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'The Sound Of Waves',
-            'item_category_id'   => 6,
-            'stock_id'      => 44,
+            'category_id'   => 6,
+            //       => 44,
             'author'        => 'Alexander Aronowitz',
             'description'   => 'Learn How to Achieve Top Marks in Your Physics Exams From Tutors That Know. Improve your grades with step-by-step help, test prep, and your own study planner. Solving Trig Eqns. SohCahToa. Unit Circle. Graphing Trig Functions. Trig Identifies. Highlights: Free Trial Available, Pricing Plans Available.',
             'image_name'    => 'Philo7.jpg',
@@ -722,8 +722,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'A Memory On The Bridge',
-            'item_category_id'   => 2,
-            'stock_id'      => 45,
+            'category_id'   => 2,
+            //       => 45,
             'author'        => 'Juliana Silva',
             'description'   => '“A memory is not simply an image produced by time traveling back to the original event -- it can be an image that is somewhat distorted because of the prior times you remembered it,” said Donna Bridge, a postdoctoral fellow at Northwestern University Feinberg School of Medicine and lead author of the paper on the study recently published in the Journal of Neuroscience.',
             'image_name'    => 'Photography1.jpg',
@@ -738,8 +738,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Freezing Time',
-            'item_category_id'   => 2,
-            'stock_id'      => 46,
+            'category_id'   => 2,
+            //       => 46,
             'author'        => 'Tanya J. Pridmore',
             'description'   => 'As he describes in Freezing Order, his second thriller-like memoir, the process of tracing and seeking to freeze money extracted from Russia in dubious circumstances is painful and time-consuming.',
             'image_name'    => 'Photography2.jpg',
@@ -754,8 +754,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Easy Snaps',
-            'item_category_id'   => 2,
-            'stock_id'      => 47,
+            'category_id'   => 2,
+            //       => 47,
             'author'        => 'Mark Anthony',
             'description'   => 'Snaps asset packs make it easy to bring your projects to life. The Asset Store and Unity tools like ProBuilder are great time savers that allow you to speed up prototyping, but we want to streamline the workflow even more. Find out how Snaps can help you fast-track your game creation process and even help newcomers get started in 3D games.',
             'image_name'    => 'Photography3.jpg',
@@ -770,8 +770,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Photographic Journey Of Vietnam',
-            'item_category_id'   => 2,
-            'stock_id'      => 48,
+            'category_id'   => 2,
+            //       => 48,
             'author'        => 'Peter Patterson',
             'description'   => 'My Luminous Vietnam Journey was far and away the best photo tour I have ever been on. It was more than a photo tour; it was an investment in myself as a keen photographer, and gave me the opportunity to engage with ordinary Vietnamese people and some extraordinary professional photographers in David and Phuoc.',
             'image_name'    => 'Photography4.jpg',
@@ -786,8 +786,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'The Ultimate Travel Photography Handbook',
-            'item_category_id'   => 2,
-            'stock_id'      => 49,
+            'category_id'   => 2,
+            //       => 49,
             'author'        => 'Eleanor Fitzgerald',
             'description'   => 'The ultimate editing handbook, updated for the digital age The Australian Editing Handbook has become an industry standard, recommended by the Society of Editors, and holds a prominent place on the shelves of writers, editors and students alike.',
             'image_name'    => 'Photography5.jpg',
@@ -802,8 +802,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Not Just Pointing Not Just Shooting',
-            'item_category_id'   => 2,
-            'stock_id'      => 50,
+            'category_id'   => 2,
+            //       => 50,
             'author'        => 'James Lopez',
             'description'   => 'Fingers Are Not Just For Pointing October 21, 2012 October 26, 2012 by BG , posted in Boomers , Country , Music , Nostalgia , Retirement , Seniors One of the most widely-publicized photos from the recent presidential debate was a view of the candidates simultaneously pointing fingers at each other.',
             'image_name'    => 'Photography6.jpg',
@@ -818,8 +818,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'The Beauty Of Nature',
-            'item_category_id'   => 2,
-            'stock_id'      => 51,
+            'category_id'   => 2,
+            //       => 51,
             'author'        => 'Gary Saycer',
             'description'   => 'The Beauty of Nature Functional Designs. The new book Wild Design: Nature Architects by science writer and essayist Kimberly Ridley is a slim, charming look at some of the most interesting results of billions of years of evolution — the beautiful and always highly functional forms of plants, fungi, insects, spiders, avians, and mammals.',
             'image_name'    => 'Photography7.jpg',
@@ -834,8 +834,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Shooting Portraits In Black And White',
-            'item_category_id'   => 2,
-            'stock_id'      => 52,
+            'category_id'   => 2,
+            //       => 52,
             'author'        => 'Monty Daza AND Kim Erikson',
             'description'   => 'Learning how to shoot portraits with a black background is something you should master as a studio portrait photographer. Traditionally, many of your shoots may use white backgrounds or even colored backdrops. But knowing how to create a black background in any location is a useful skill to add to your repertoire.',
             'image_name'    => 'Photography8.jpg',
@@ -850,8 +850,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => "50 Of The World's Iconic Snapshots",
-            'item_category_id'   => 2,
-            'stock_id'      => 53,
+            'category_id'   => 2,
+            //       => 53,
             'author'        => 'Edward H. Morrison',
             'description'   => 'The Iconic Oxbow bend on 28th September 2020. Road Trip to Teton National Park. 28th September 2020. Grand Teton national parks most photographic location is the Oxbow bend.It is the most iconic image of the park with the meandering snake river with the Mount Moran las the perfect backdrop and the aspen trees that line along the snake river bank.',
             'image_name'    => 'Photography9.jpg',
@@ -866,8 +866,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Behind The Lens: Image Of A Woman',
-            'item_category_id'   => 2,
-            'stock_id'      => 54,
+            'category_id'   => 2,
+            //       => 54,
             'author'        => 'Dorothy Mitchell',
             'description'   => 'Women from various religious orders were also recognized caretakers of the sick having ... More from Behind the Lens: A History in Pictures More from Behind the Lens: A History in Pictures.',
             'image_name'    => 'Photography10.jpg',
@@ -882,8 +882,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Mastering The Art Of Street Photography',
-            'item_category_id'   => 2,
-            'stock_id'      => 55,
+            'category_id'   => 2,
+            //       => 55,
             'author'        => 'George Morrison',
             'description'   => 'Beyond photography settings, gear, and other technical aspects, if you want your pictures to speak for themselves, one of the photography basics to master is the composition. Composition is the language of photography, and using different compositional elements and rules, you will be able to capture and shape your visual message.',
             'image_name'    => 'Photography11.jpg',
@@ -898,8 +898,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Through Wide Lenses',
-            'item_category_id'   => 2,
-            'stock_id'      => 56,
+            'category_id'   => 2,
+            //       => 56,
             'author'        => 'Erik Reid',
             'description'   => 'This lens has to be the best and sharpest Leica wide angle lens available. The f/3.4 aperture allows just enough light in without losing focus with a shallower depth of field. The wide focal length of 21mm is designed with 8 elements and a 9-blade diaphragm which helps minimize distortion all while being packaged into a compact and light package to be mounted to your Leica body effortlessly.',
             'image_name'    => 'Photography12.jpg',
@@ -914,8 +914,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Fresh & Healthy Eats',
-            'item_category_id'   => 7,
-            'stock_id'      => 57,
+            'category_id'   => 7,
+            //       => 57,
             'author'        => 'Adora Montminy',
             'description'   => 'It is easy to eat healthy when you have got so many delicious options. From lightened-up burgers and smoky grilled chicken to flavorful sides packed with colorful fruits and veggies.',
             'image_name'    => 'rec-food1.jpg',
@@ -930,8 +930,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Baking Essentials',
-            'item_category_id'   => 7,
-            'stock_id'      => 58,
+            'category_id'   => 7,
+            //       => 58,
             'author'        => 'Timothy Kings',
             'description'   => 'Huge Range Of Cake Decorating & Sugarcraft Supplies Online & In Store. Shop Now! Great Prices. Free Shipping From £35+ Leading Brands. Fast Turnaround. Based in South Wales. 100s Of Excellent Reviews. Brands: Renshaw, Massa Ticino, PME, Wilton, Saracino, Rainbow Dust, Vanilla Valley.',
             'image_name'    => 'rec-food2.jpg',
@@ -946,8 +946,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'The Special Cook Book',
-            'item_category_id'   => 7,
-            'stock_id'      => 59,
+            'category_id'   => 7,
+            //       => 59,
             'author'        => 'Marceline Anderson',
             'description'   => 'A company is guilty of cooking the items when it knowingly includes incorrect information on its financial statements -- manipulating expenses and earnings to improve their earnings per share of stock (EPS). In this article, we will look at the tricks that some companies used to beef up their financial documents as well as why they do it.',
             'image_name'    => 'rec-food3.jpg',
@@ -962,8 +962,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'The Cookbook For The Dessert Lover!',
-            'item_category_id'   => 7,
-            'stock_id'      => 60,
+            'category_id'   => 7,
+            //       => 60,
             'author'        => 'Martha Kween Alice & Dulce Maria',
             'description'   => 'Cookbook filled with guilt-free, easy to bake, chocolate recipes that the entire family can enjoy! INFO ON BOOK. - 32 guilt-free, easy to bake recipes. - All desserts ranging from cookies, muffins, pancakes and many more! - Every dessert INCLUDES chocolate in it - ranging from cocoa, chocolate chips or nibs. - All the desserts are gluten free.',
             'image_name'    => 'rec-food4.jpg',
@@ -978,8 +978,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Road To Fitness & Health',
-            'item_category_id'   => 7,
-            'stock_id'      => 61,
+            'category_id'   => 7,
+            //       => 61,
             'author'        => 'Jonathan Paterson',
             'description'   => 'Driver health. A person fitness to drive can be affected by a medical condition, by temporary illness, substances such as alcohol and by the environment in which they work, drive and live. Health impairments, such as stress, sleep disturbance, migraine, flu, severe colds and hayfever can lead to unsafe driving.',
             'image_name'    => 'rec-food5.jpg',
@@ -994,8 +994,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Sincerely Delicious!',
-            'item_category_id'   => 7,
-            'stock_id'      => 62,
+            'category_id'   => 7,
+            //       => 62,
             'author'        => 'Isabel Mercado',
             'description'   => 'In Delicious - Emily New Beginning, Emily lovely little family welcomes its newest member! After the birth of their daughter, Emily and Patrick have to pick up daily life. Although there are lots of loving moments to cherish, local rivalry and the combination of work and parenthood are challenging.',
             'image_name'    => 'rec-food6.jpg',
@@ -1010,8 +1010,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Crumbs List',
-            'item_category_id'   => 7,
-            'stock_id'      => 63,
+            'category_id'   => 7,
+            //       => 63,
             'author'        => 'Chef Jessie',
             'description'   => 'Crumb. Concert. Setlists. & Tour Dates. Artists with same name. Crumb (Psychedelic Soul band) Crumb (90s US indie rock band from San Francisco) Crumb (Belgian 1990s heavy metal band) Crumb ( New Zealand band).',
             'image_name'    => 'rec-food7.jpg',
@@ -1026,8 +1026,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Desserts Cookbook',
-            'item_category_id'   => 7,
-            'stock_id'      => 64,
+            'category_id'   => 7,
+            //       => 64,
             'author'        => 'Marissa Mendez',
             'description'   => 'The Vegan Dessert Cookbook includes: Stepping stones ―Whether you’re new to the vegan lifestyle or a pro at plant-based cooking, this dessert cookbook offers recipes for every skill level and taste. Plant-based pantry ―Find help on essential equipment and must-have ingredients, plus easy swaps for other allergens and dietary needs.',
             'image_name'    => 'rec-food8.jpg',
@@ -1042,8 +1042,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Appetite For Precision: Food Photography',
-            'item_category_id'   => 7,
-            'stock_id'      => 65,
+            'category_id'   => 7,
+            //       => 65,
             'author'        => 'Christopher Henderson',
             'description'   => 'How to Plate Food. There are three popular plating styles: classic, free form, and landscape. Mastering each style will create meals worth photographing.We provide ideas on how to plate in each style below using: filet mignon, potato puree, carrots, a demi-glace, a pea puree, a lima bean and pea blend, thyme, and fried leeks.',
             'image_name'    => 'rec-food9.jpg',
@@ -1058,8 +1058,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'The Art Of Pastries',
-            'item_category_id'   => 7,
-            'stock_id'      => 66,
+            'category_id'   => 7,
+            //       => 66,
             'author'        => 'Kirk Mitch',
             'description'   => 'Patisserie gives readers all the technical know-how required to become an expert in the art of French patisserie and invent their own masterpieces. Each of the 100 recipes features a full-colour cross-section illustration, step-by-step photography and a beautiful hero image in order to both inspire the reader and demystify some of France most iconic desserts.',
             'image_name'    => 'rec-food10.jpg',
@@ -1074,8 +1074,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Modern Archiecture',
-            'item_category_id'   => 1,
-            'stock_id'      => 67,
+            'category_id'   => 1,
+            //       => 67,
             'author'        => 'Jason Smith',
             'description'   => 'Modern architecture, or modernist architecture, was an architectural movement or architectural style based upon new and innovative technologies of construction, particularly the use of glass, steel, and reinforced concrete; the idea that form should follow function (functionalism); an embrace of minimalism',
             'image_name'    => 'Architect1.jpg',
@@ -1090,8 +1090,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'a comprehensive guide to Contemporary Architecture',
-            'item_category_id'   => 1,
-            'stock_id'      => 68,
+            'category_id'   => 1,
+            //       => 68,
             'author'        => 'Armando Lopez & Lawrence Mango',
             'description'   => 'What Is Contemporary Architecture? Contemporary architecture refers to the design, landscaping, and architectural features being used right now in the 21st century. It includes all the latest innovations, new trends, as well as thoughtful improvements and changes to architectural features from prior eras.',
             'image_name'    => 'Architect2.jpg',
@@ -1106,8 +1106,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Basic Space Architecture Journal',
-            'item_category_id'   => 1,
-            'stock_id'      => 69,
+            'category_id'   => 1,
+            //       => 69,
             'author'        => 'Ethan Rushmore',
             'description'   => 'Space planning is a complex process with many factors to consider. The principles of space planning involve satisfying a defined criteria on a priority basis – as a result, space planning is frequently about compromise. That being said, there is often more than one solution to planning out the space requirements of a building.',
             'image_name'    => 'Architect3.jpg',
@@ -1122,8 +1122,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Post Modernisn In Architecture',
-            'item_category_id'   => 1,
-            'stock_id'      => 70,
+            'category_id'   => 1,
+            //       => 70,
             'author'        => 'Ramiro Burgess',
             'description'   => 'Postmodern architecture is a 20th century movement that is characterized by an often irreverent and eclectic mishmash of classic and modern styles to create singular works of architecture that aspire to look like nothing that has come before.',
             'image_name'    => 'Architect4.jpg',
@@ -1138,8 +1138,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'European Architecture the history behind the europian walls',
-            'item_category_id'   => 1,
-            'stock_id'      => 71,
+            'category_id'   => 1,
+            //       => 71,
             'author'        => 'Michelle Morris',
             'description'   => 'Space planning is a complex process with many factors to consider. The principles of space planning involve satisfying a defined criteria on a priority basis – as a result, space planning is frequently about compromise. That being said, there is often more than one solution to planning out the space requirements of a building.',
             'image_name'    => 'Architect5.jpg',
@@ -1154,8 +1154,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Urban Jungle discovering New York architecture',
-            'item_category_id'   => 1,
-            'stock_id'      => 72,
+            'category_id'   => 1,
+            //       => 72,
             'author'        => 'Created by Archi History Publishing',
             'description'   => 'Every architectural movement has some ideological base. Although we cannot talk about one specific movement during 21 century, there are some common aspects and trends in modern architecture as well. Nowadays in city and landscape architecture very popular concept is urban jungle or miniature urban parks. Here is an explanation of what they are and why are they so meaningful in modern city and landscape architectures.',
             'image_name'    => 'Architect6.jpg',
@@ -1170,8 +1170,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Modern Architecture volume 2 6th edition',
-            'item_category_id'   => 1,
-            'stock_id'      => 73,
+            'category_id'   => 1,
+            //       => 73,
             'author'        => 'Armando Brandon',
             'description'   => 'Modern architecture, or modernist architecture, was an architectural movement or architectural style based upon new and innovative technologies of construction, particularly the use of glass, steel, and reinforced concrete; the idea that form should follow function (functionalism); an embrace of minimalism',
             'image_name'    => 'Architect7.jpg',
@@ -1186,8 +1186,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'The Principles of Architecture',
-            'item_category_id'   => 1,
-            'stock_id'      => 74,
+            'category_id'   => 1,
+            //       => 74,
             'author'        => 'Raymond Wilkins',
             'description'   => "They are balance, rhythm, emphasis, contrast, visual, proportion and scale. The key point is that you don't have to apply all those principles and just be comfortable to create some unique points for your work.",
             'image_name'    => 'Architect8.jpg',
@@ -1202,8 +1202,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Modern Architecture',
-            'item_category_id'   => 1,
-            'stock_id'      => 75,
+            'category_id'   => 1,
+            //       => 75,
             'author'        => 'Nikko Adamson',
             'description'   => 'Modern architecture, or modernist architecture, was an architectural movement or architectural style based upon new and innovative technologies of construction, particularly the use of glass, steel, and reinforced concrete; the idea that form should follow function (functionalism); an embrace of minimalism',
             'image_name'    => 'Architect9.jpg',
@@ -1218,8 +1218,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'The Poetry of Skyscrapers appreciating the worlds tallest buildings',
-            'item_category_id'   => 1,
-            'stock_id'      => 76,
+            'category_id'   => 1,
+            //       => 76,
             'author'        => 'Ariadne Cobb',
             'description'   => 'Architect Frank Gehry, real estate developer Zhang Xin, poet Robert Polito, and student poets from across the U.S. consider the parallel emergence of architectural and poetic modernism, through Sandburg’s avant-garde ode to skyscrapers.',
             'image_name'    => 'Architect10.jpg',
@@ -1234,8 +1234,8 @@ class ItemSeeder extends Seeder
         ]);
         DB::table('items')->insert([
             'title'         => 'Blueprints & Buildings',
-            'item_category_id'   => 1,
-            'stock_id'      => 77,
+            'category_id'   => 1,
+            //       => 77,
             'author'        => 'Russell Kennedy',
             'description'   => 'Space planning is a complex process with many factors to consider. The principles of space planning involve satisfying a defined criteria on a priority basis – as a result, space planning is frequently about compromise. That being said, there is often more than one solution to planning out the space requirements of a building.',
             'image_name'    => 'Architect11.jpg',

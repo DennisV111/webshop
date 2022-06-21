@@ -1,5 +1,22 @@
-h2 {
+header {
+    width: 70%;
+    text-align: center;
+    background-color: rgb(247, 236, 222);
+}
+
+h1 {
+    text-align: center;
     color: blue;
+}
+
+h2 {
+    text-align: center;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 div {
@@ -7,6 +24,16 @@ div {
     display: flex;
     justify-content: center;
 }
+
+/* h2 {
+    color: blue;
+}
+
+div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+} */
 
 th {
     /*width: 120px;*/
@@ -16,7 +43,7 @@ th {
 }
 
 td {
-    /*width: 120px;*/
+    min-width: 50px;
     height: 20px;
     text-align: center;
     background-color: rgb(216, 224, 224);
@@ -24,13 +51,14 @@ td {
 
 caption {
     height: 30px;
+    min-width: 300px;
     font-size: larger;
     background-color:rgb(173, 204, 231);
 }
 
 .button {
     border: 2px black solid;
-    padding: 15px 32px;
+    padding: 10px 22px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -39,8 +67,13 @@ caption {
     height: 30px; */
   }
 
+.index {
+    width: 160px;
+    padding: 20px 44px;
+}
+
 .add {
-    background-color: #4CAF50;
+    background-color: #77b878;
     color: white;
 }
 
@@ -54,10 +87,10 @@ caption {
 }
 
 .edit {
-    background-color: yellow;
+    background-color: rgb(202, 202, 131);
 }
 
-.delete {
+.remove {
     color: black;
-    background-color:rgb(204, 204, 204);
+    background-color:rgba(219, 16, 16, 0.555);
 }

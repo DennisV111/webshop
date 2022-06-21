@@ -17,8 +17,8 @@ return new class extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->unsignedInteger('order_status_id');
-            $table->foreign('order_status_id')->references('id')->on('order_statusses');
+            $table->unsignedInteger('status_id');
+            $table->foreign('status_id')->references('id')->on('statusses');
             $table->date('order_date');
             $table->string('shipping_method',20);
             $table->timestamps();

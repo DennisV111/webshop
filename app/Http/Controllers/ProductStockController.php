@@ -2,13 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ItemCategory;
 use Illuminate\Http\Request;
-use App\Models\Item;
 
-
-
-class ItemCategoryController extends Controller
+class ProductStockController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +13,7 @@ class ItemCategoryController extends Controller
      */
     public function index()
     {
-        $item_categories = ItemCategory::all();
+        //
     }
 
     /**
@@ -84,25 +80,5 @@ class ItemCategoryController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-
-
-    // New Function Anas
-    public function showCategoryPage()
-    {
-        $item_categories = ItemCategory::all();
-        $items = Item::paginate(12);
-        $authors = Item::paginate(6);
-        $members = Item::paginate(4);
-
-
-
-        return view('frontend.category')->with([
-            'items' =>  $items,
-            'item_categories' => $item_categories,
-            'authors' => $authors,
-            'members' => $members
-        ]);
     }
 }

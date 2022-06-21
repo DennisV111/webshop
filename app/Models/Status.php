@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ItemStock extends Model
+class Status extends Model
 {
     use HasFactory;
 
-    protected $table = 'item_stocks';
-
+    protected $table = 'statusses';
+    
     protected $guarded = ['id'];
 
-    public function item()
+    public function order()
     {
-        return $this->hasOne('\App\Models\Item');
+        return $this->hasOne('\App\Models\Order');
     }
 }
