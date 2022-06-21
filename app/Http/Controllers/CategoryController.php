@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ItemCategory;
 use Illuminate\Http\Request;
+use App\Models\Category;
 use App\Models\Item;
 
-
-
-class ItemCategoryController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +14,10 @@ class ItemCategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $item_categories = ItemCategory::all();
+    {   
+        $categories = Category::all();
+
+        return view('admin.categories.index', compact('categories'));
     }
 
     /**
@@ -27,7 +27,7 @@ class ItemCategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.categories.create');
     }
 
     /**
@@ -38,7 +38,12 @@ class ItemCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|max:60'
+        ]);
+        Category::create($validatedData);
+
+        return redirect('/admin/categories');
     }
 
     /**
@@ -60,7 +65,10 @@ class ItemCategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $category = Category::findOrFail($id);
+
+        return view('admin.categories.edit', compact('category'));
+
     }
 
     /**
@@ -72,7 +80,12 @@ class ItemCategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|max:60'
+        ]);
+        Category::whereId($id)->update($validatedData);
+
+        return redirect('/admin/categories');
     }
 
     /**
@@ -83,20 +96,23 @@ class ItemCategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
-    }
+        $category = Category::findOrFail($id);
+        $category->delete();
 
+        return redirect('/admin/categories');
+    }
+    
 
 
     // New Function Anas
     public function showCategoryPage()
     {
-        $item_categories = ItemCategory::all();
+        $categories = Category::all();
         $items = Item::paginate(12);
 
         return view('frontend.category')->with([
             'items' =>  $items,
-            'item_categories' => $item_categories
+            'categories' => $categories
         ]);
     }
 }

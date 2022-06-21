@@ -15,10 +15,8 @@ return new class extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('item_category_id');
-            $table->foreign('item_category_id')->references('id')->on('item_categories');
-            $table->unsignedInteger('stock_id');
-            $table->foreign('stock_id')->references('id')->on('item_stocks');
+            $table->unsignedInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->string('title',100);
             $table->string('author',60);
             $table->text('description',60);

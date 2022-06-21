@@ -5,12 +5,13 @@ use Illuminate\Support\Facades\Route;
 // use App\Http\Controllers\Frontend\IndexController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DennisController;
-use App\Http\Controllers\ItemCategoryController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ItemController;
-use App\Http\Controllers\ItemStockController;
+use App\Http\Controllers\StockController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\OrderItemController;
-use App\Http\Controllers\OrderStatusController;
+use App\Http\Controllers\StatusController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\DB;
@@ -40,13 +41,20 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 Route::get('items', [ItemController::class, 'index'])->name('items.index');
 
-Route::get('frontend/category', [ItemCategoryController::class, 'showCategoryPage'])->name('itemcategory.index');
+Route::get('frontend/category', [CategoryController::class, 'showCategoryPage'])->name('itemcategory.index');
 
 Route::get('frontend/shop-page', [DennisController::class, 'index'])->name('dennis.index');
 
+//admin routes
+
+Route::get('admin', [AdminController::class, 'index'])->name('admin.index');
+
 Route::resource('admin/items', ItemController::class)->names('admin.items');
 
-// test van Dennis
+Route::resource('admin/categories', CategoryController::class)->names('admin.categories');
+
+// end of admin routes
+
 // Route::get('dennis/shop', [DennisController::class, 'index'])->name('dennis.index');
 
 //onderstaande routes zijn tijdelijke routes naar de blades

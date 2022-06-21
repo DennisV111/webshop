@@ -5,15 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class OrderStatus extends Model
+class Category extends Model
 {
     use HasFactory;
 
-    protected $table = 'order_statusses';
+    protected $table = 'categories';
     
     protected $guarded = ['id'];
 
-    public function order() {
-         return $this->hasOne('\App\Models\Order');
+    public function items() {
+         return $this->hasMany('\App\Models\Item');
     }
 }
