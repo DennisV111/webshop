@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="breadcrumb-inner">
                     <ul class="list-inline list-unstyled">
-                        <li><a href="{{ route('home.index') }}">Home</a></li>
+                        <li><a href="{{ url('/') }}">Home</a></li>
                         <li class='active'>Shopping Cart</li>
                     </ul>
                 </div><!-- /.breadcrumb-inner -->
@@ -37,14 +37,14 @@
                                                 <div class="shopping-cart-btn">
                                                     <span class="">
                                                         <a href="{{ route('item.showItemPage') }}"
-                                                            class="btn btn-upper btn-primary outer-left-xs"><i
+                                                            class=" btn-upper btn-primary outer-left-xs"><i
                                                                 class="fa fa-angle-left"></i>Continue
                                                             Shopping</a>
 
 
 
                                                         <a href="#"
-                                                            class="btn btn-upper btn-primary pull-right outer-right-xs">Update
+                                                            class=" btn-upper btn-primary pull-right outer-right-xs">Update
                                                             shopping cart</a>
                                                     </span>
                                                 </div><!-- /.shopping-cart-btn -->
@@ -186,7 +186,7 @@
                                                     placeholder="">
                                             </div>
                                             <div class="pull-right">
-                                                <button type="submit" class="btn-upper btn btn-primary">GET A
+                                                <button type="submit" class="btn-upper  btn-primary">GET A
                                                     QOUTE</button>
                                             </div>
                                         </td>
@@ -213,7 +213,7 @@
                                                     placeholder="You Coupon..">
                                             </div>
                                             <div class="clearfix pull-right">
-                                                <button type="submit" class="btn-upper btn btn-primary">APPLY
+                                                <button type="submit" class="btn-upper btn-primary">APPLY
                                                     COUPON</button>
                                             </div>
                                         </td>
@@ -240,7 +240,7 @@
                                     <tr>
                                         <td>
                                             <div class="cart-checkout-btn pull-right">
-                                                <button type="submit" class="btn btn-primary checkout-btn">PROCCED TO
+                                                <button type="submit" class=" btn-primary checkout-btn">PROCCED TO
                                                     CHEKOUT</button>
                                                 <span class="">Checkout with multiples address!</span>
                                             </div>
