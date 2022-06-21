@@ -17,22 +17,22 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    
+
     protected $table = 'users';
-    
-    protected $guarded = ['id'];
+
+    protected $guarded = [];
 
     /**
      * The attributes that should be hidden for serialization.
      *
      * @var array<int, string>
      */
-    
-     protected $hidden = [
-         'password'
-     ];
-    
-     //protected $hidden = [
+
+    protected $hidden = [
+        'password'
+    ];
+
+    //protected $hidden = [
     //    'password',
     //    'remember_token',
     //];
@@ -42,16 +42,17 @@ class User extends Authenticatable
      *
      * @var array<string, string>
      */
-    
+
     // protected $casts = [
     //    'email_verified_at' => 'datetime',
     //];
 
-    public function orders() {
+    public function orders()
+    {
         return $this->hasMany('\App\Models\Order');
     }
-    public function reviews() {
+    public function reviews()
+    {
         return $this->hasMany('\App\Models\Review');
     }
-
 }

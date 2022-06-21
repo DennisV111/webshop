@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Category;
-use App\Models\Item;
 
-class CategoryController extends Controller
+class CheckoutController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +12,8 @@ class CategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
-        $categories = Category::all();
-
-        return view('admin.categories.index', compact('categories'));
+    {
+        return view('checkout');
     }
 
     /**
@@ -27,7 +23,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.categories.create');
+        //
     }
 
     /**
@@ -38,12 +34,7 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'name' => 'required|max:60'
-        ]);
-        Category::create($validatedData);
-
-        return redirect('/admin/categories');
+        //
     }
 
     /**
@@ -65,10 +56,7 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $category = Category::findOrFail($id);
-
-        return view('admin.categories.edit', compact('category'));
-
+        //
     }
 
     /**
@@ -80,12 +68,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $validatedData = $request->validate([
-            'name' => 'required|max:60'
-        ]);
-        Category::whereId($id)->update($validatedData);
-
-        return redirect('/admin/categories');
+        //
     }
 
     /**
@@ -96,29 +79,6 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        $category = Category::findOrFail($id);
-        $category->delete();
-
-        return redirect('/admin/categories');
-    }
-    
-
-
-    // New Function Anas
-    public function showCategoryPage()
-    {
-        $categories = Category::all();
-        $items = Item::paginate(12);
-        $authors = Item::paginate(6);
-        $members = Item::paginate(4);
-
-
-
-        return view('frontend.category')->with([
-            'items' =>  $items,
-            'categories' => $categories,
-            'authors' => $authors,
-            'members' => $members
-        ]);
+        //
     }
 }

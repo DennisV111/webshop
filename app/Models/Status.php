@@ -13,7 +13,8 @@ class Status extends Model
     
     protected $guarded = ['id'];
 
-    public function order() {
-         return $this->hasOne('\App\Models\Order');
+    public function order()
+    {
+        return $this->hasOne('\App\Models\Order');
     }
 }

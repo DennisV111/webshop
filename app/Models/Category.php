@@ -13,7 +13,8 @@ class Category extends Model
     
     protected $guarded = ['id'];
 
-    public function items() {
-         return $this->hasMany('\App\Models\Item');
+    public function items()
+    {
+        return $this->hasMany('\App\Models\Item');
     }
 }
