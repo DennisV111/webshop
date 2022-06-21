@@ -10,10 +10,11 @@ class OrderStatus extends Model
     use HasFactory;
 
     protected $table = 'order_statusses';
-    
+
     protected $guarded = ['id'];
 
-    public function order() {
-         return $this->hasOne('\App\Models\Order');
+    public function order()
+    {
+        return $this->hasOne('\App\Models\Order');
     }
 }

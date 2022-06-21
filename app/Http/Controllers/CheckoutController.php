@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
 
-class UserController extends Controller
+class CheckoutController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return view('checkout');
     }
 
     /**
@@ -35,18 +34,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $user = new User();
-        $user->first_name = $request->first_name;
-        $user->last_name = $request->last_name;
-        $user->street_address = $request->street_address;
-        $user->postal_code = $request->postal_code;
-        $user->city = $request->city;
-        $user->email = $request->email;
-        // $user->password = $request->password;
-        // $user->role = $request->role;
-        $user->save();
-
-        return redirect('checkout')->with('success', 'User created successfully');
+        //
     }
 
     /**
@@ -93,18 +81,4 @@ class UserController extends Controller
     {
         //
     }
-
-    // public function addUser(Request $request)
-    // {
-    //     $user = new User();
-    //     $user->first_name = $request->first_name;
-    //     $user->last_name = $request->last_name;
-    //     $user->street_address = $request->street_address;
-    //     $user->postal_code = $request->postal_code;
-    //     $user->city = $request->city;
-    //     $user->email = $request->email;
-    //     $user->password = $request->password;
-    //     $user->role = $request->role;
-    //     $user->save();
-    // }
 }

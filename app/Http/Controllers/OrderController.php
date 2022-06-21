@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Order;
 
 class OrderController extends Controller
 {
@@ -13,7 +14,6 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**
@@ -80,5 +80,16 @@ class OrderController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    public function addOrder(Request $request)
+    {
+        $order = new Order();
+        $order->item_id = $request->user_id;
+        $order->product_id = $request->product_id;
+        $order->quantity = $request->quantity;
+        $order->total = $request->total;
+        $order->save();
     }
 }

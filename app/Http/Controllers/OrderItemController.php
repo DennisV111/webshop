@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Item;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 class OrderItemController extends Controller
 {
@@ -13,7 +15,10 @@ class OrderItemController extends Controller
      */
     public function index()
     {
-        //
+
+        $cart = Cart::content();
+        // dd($cart);
+        return view('shopping-cart', compact('cart'));
     }
 
     /**
@@ -34,7 +39,26 @@ class OrderItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $duplicates = Cart::search(function ($item, $rowId) use ($request) {
+            return $item->id === $request->id;
+        });
+
+        if ($duplicates->isNotEmpty()) {
+            return redirect()->route('orderItem.index')->with('success', 'Item is already in your cart!');
+        }
+
+        $item = Item::findOrFail($request->input(key: 'item_id'));
+        Cart::add(
+            $item->id,
+            $item->title,
+            $request->input(key: 'quantity', default: 1),
+            $item->price,
+        )
+            ->associate('App\Models\Item');
+        $item->save();
+
+        return redirect()->route('orderItem.index')->with('success', 'Item was added to your cart!');
     }
 
     /**
@@ -68,7 +92,7 @@ class OrderItemController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return $request->all();
     }
 
     /**
@@ -79,6 +103,25 @@ class OrderItemController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Cart::remove($id);
+
+        return back()->with('success_message', 'Item has been removed!');
     }
+
+    // public function empty()
+    // {
+    //     Cart::destroy();
+
+
+    // }
+
+    // public function checkout()
+    // {
+    //     $cart = Cart::where('user_id', auth()->id())->get();
+    //     foreach ($cart as $cartItem) {
+    //         $item = Item::find($cartItem->item_id);
+    //         if (! $item || $item->)
+
+    //     }
+    // }
 }

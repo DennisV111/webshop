@@ -36,18 +36,23 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/assets/css/blue.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/assets/css/bootstrap-select.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/assets/css/main.css') }}" />
-    {{-- <link rel="stylesheet" href="{{ asset('frontend/assets/assets/css/lightbox.css') }}" /> --}}
+    <link rel="stylesheet" href="{{ asset('frontend/assets/assets/css/lightbox.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/assets/css/owl.carousel.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/assets/css/owl.transitions.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/assets/assets/css/rateit.css') }}" />
 
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/checkout.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/slider.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/search.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/shipping.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/featured.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/items.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/category.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/shoppingCart.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/detail.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/details.css') }}">
     {{-- <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}"> --}}
 
     <link rel="stylesheet" href="{{ asset('frontend/assets/assets/css/font-awesome.css') }}" />
@@ -63,6 +68,8 @@
 
 <body>
 
+
+
     <header>
 
         @include('frontend.body.header')
@@ -76,7 +83,7 @@
 
     </main>
 
-    @include('frontend.body.featured')
+
 
 
 
@@ -107,6 +114,7 @@
     <script src="{{ asset('frontend/assets/assets/js/wow.min.js') }}"></script>
     <script src="{{ asset('frontend/assets/assets/js/scripts.js') }}"></script>
 
+    @yield('extra-js')
 
 </body>
 

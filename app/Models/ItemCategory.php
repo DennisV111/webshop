@@ -10,11 +10,11 @@ class ItemCategory extends Model
     use HasFactory;
 
     protected $table = 'item_categories';
-    
+
     protected $guarded = ['id'];
 
-    public function items() {
-         return $this->hasMany('\App\Models\Item');
+    public function items()
+    {
+        return $this->hasMany('\App\Models\Item');
     }
 }
-

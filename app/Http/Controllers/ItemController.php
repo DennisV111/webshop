@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Item;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\DB;
+
 
 class ItemController extends Controller
 {
@@ -19,10 +21,9 @@ class ItemController extends Controller
         //$items = Item::all();
         $items = Item::with('item_category')->get();
 
-        $indexAttributes = ['title','author','isbn' , 'item_category->name', 'stock_id'];
+        $indexAttributes = ['title', 'author', 'isbn', 'item_category->name', 'stock_id'];
 
-        return view('admin.items.index', compact('items','indexAttributes'));
-
+        return view('admin.items.index', compact('items', 'indexAttributes'));
     }
 
     /**
@@ -73,11 +74,11 @@ class ItemController extends Controller
     public function show($id)
     {
         $item = Item::findOrFail($id);
-      
-        $attributes = array_keys($item->toArray());
-        $showTableAttributes = array_slice($attributes, 0, count($attributes)-2);
 
-        return view('admin.items.show', compact('item','showTableAttributes'));
+        $attributes = array_keys($item->toArray());
+        $showTableAttributes = array_slice($attributes, 0, count($attributes) - 2);
+
+        return view('admin.items.show', compact('item', 'showTableAttributes'));
     }
 
     /**
@@ -92,7 +93,7 @@ class ItemController extends Controller
         //route('admin.items.edit', [$item->id, $item[$attribute] ])
         $item = Item::findOrFail($id);
 
-        return view('admin.items.edit', compact('item','attribute'));
+        return view('admin.items.edit', compact('item', 'attribute'));
     }
 
     /**
@@ -120,20 +121,92 @@ class ItemController extends Controller
 
 
 
-    // New Function Anas
+    // New Functions Anas
 
-    public function categoryPagination()
+    public function showItemPage()
     {
-        $items = Item::paginate(9);
+        $items = Item::paginate(12);
 
-        return view('frontend.category', compact('items'));
+        return view('frontend.shop-page', compact('items'));
     }
 
-    // public function showSearch(Request $request)
-    // {
-    //     $search = $request->search;
-    //     $items = Item::where('title', 'like', '%' . $search . '%')->all();
+    public function showDetailPage($title)
+    {
+        $item = Item::where('title', $title)->firstOrFail();
+        $cart = Cart::content();
 
-    //     return view('frontend.index', compact('items'));
+
+        return view('frontend.book_details.detail')->with([
+            'item' =>  $item,
+            'cart' => $cart,
+        ]);
+    }
+
+
+
+    // public function basket()
+    // {
+    //     return view('shopping-cart');
+    // }
+
+    // public function addToCart($id)
+    // {
+    //     $item = Item::find($id);
+    //     if (!$item) {
+    //         abort(404);
+    //     }
+    //     $basket = session()->get('basket');
+    //     // if basket is empty then this the first item
+    //     if (!$basket) {
+    //         $basket = [
+    //             $id => [
+    //                 "name" => $item->title,
+    //                 "item_qty" => 1,
+    //                 "price" => $item->price,
+    //                 "author" => $item->author,
+    //                 "item_img" => $item->image_name
+    //             ]
+    //         ];
+    //         session()->put('basket', $basket);
+    //         return redirect()->back()->with('success', 'Item added to basket successfully!');
+    //     }
+    //     // if basket not empty then check if this item exist then increment item_qty
+    //     if (isset($basket[$id])) {
+    //         $basket[$id]['item_qty']++;
+    //         session()->put('basket', $basket);
+    //         return redirect()->back()->with('success', 'Item added to basket successfully!');
+    //     }
+    //     // if item not exist in basket then add to basket with item_qty = 1
+    //     $basket[$id] = [
+    //         "name" => $item->tilte,
+    //         "item_qty" => 1,
+    //         "price" => $item->price,
+    //         "author" => $item->author,
+    //         "item_img" => $item->image_name
+    //     ];
+    //     session()->put('basket', $basket);
+    //     return redirect()->back()->with('success', 'Item added to basket successfully!');
+    // }
+
+    // public function updateCart(Request $request)
+    // {
+    //     if ($request->id and $request->item_qty) {
+    //         $basket = session()->get('basket');
+    //         $basket[$request->id]["item_qty"] = $request->item_qty;
+    //         session()->put('basket', $basket);
+    //         session()->flash('success', 'Your Cart updated successfully');
+    //     }
+    // }
+
+    // public function remove(Request $request)
+    // {
+    //     if ($request->id) {
+    //         $basket = session()->get('basket');
+    //         if (isset($basket[$request->id])) {
+    //             unset($basket[$request->id]);
+    //             session()->put('basket', $basket);
+    //         }
+    //         session()->flash('success', 'Item removed successfully');
+    //     }
     // }
 }

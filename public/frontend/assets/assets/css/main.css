@@ -1274,7 +1274,7 @@ a {
 
 .shopping-cart-table table tbody tr td .quant-input .arrows .arrow:hover,
 .shopping-cart-table table tbody tr td .quant-input .arrows .arrow:focus {
-    color: #12cca7;
+    color: #1272cc;
 }
 
 .logo-color {
@@ -6405,7 +6405,7 @@ header {
 
 .shopping-cart .shopping-cart-table table tbody tr .romove-item a:hover,
 .shopping-cart .shopping-cart-table table tbody tr .romove-item a:focus {
-    color: #ff000 !important;
+    color: #fff000 !important;
 }
 
 .shopping-cart .shopping-cart-table table tbody tr .cart-image .entry-thumbnail {
