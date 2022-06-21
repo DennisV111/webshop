@@ -49,7 +49,8 @@
                                                                         Firms</a>
                                                                 </li>
                                                                 <li>
-                                                                    <a href="#">Architecture: Professional Practice</a>
+                                                                    <a href="#">Architecture: Professional
+                                                                        Practice</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="#">Landscape Art & Architecture</a>
@@ -97,8 +98,8 @@
                                     <div class="sidebar-widget-body m-t-10">
                                         <div class="price-range-holder">
                                             <span class="min-max">
-                                                <span class="pull-left">$50.00</span>
-                                                <span class="pull-right">$300.00</span>
+                                                <span class="pull-left">&euro;50.00</span>
+                                                <span class="pull-right">&euro;300.00</span>
                                             </span>
                                             <input type="text" id="amount"
                                                 style="
@@ -110,7 +111,7 @@
                                             <input type="text" class="price-slider" value="" />
                                         </div>
                                         <!-- /.price-range-holder -->
-                                        <a href="#" class="lnk btn btn-primary">Show Now</a>
+                                        <a href="#" class="btn-primary">Show Now</a>
                                     </div>
                                     <!-- /.sidebar-widget-body -->
                                 </div>
@@ -138,51 +139,25 @@
                                 <!----------- Testimonials------------->
                                 <div class="sidebar-widget wow fadeInUp outer-top-vs">
                                     <div id="advertisement" class="advertisement">
-                                        <div class="item">
-                                            <div class="avatar">
-                                                <img src="assets/images/testimonials/member1.png" alt="Image" />
-                                            </div>
-                                            <div class="testimonials">
-                                                <em>"</em> Vtae sodales aliq uam morbi non sem lacus
-                                                port mollis. Nunc condime tum metus eud molest sed
-                                                consectetuer.<em>"</em>
-                                            </div>
-                                            <div class="clients_author">
-                                                John Doe <span>Abc Company</span>
-                                            </div>
-                                            <!-- /.container-fluid -->
-                                        </div>
-                                        <!-- /.item -->
+                                        @foreach ($members as $item)
+                                            <div class="item">
+                                                <div class="avatar">
+                                                    <img src="{{ asset('frontend/assets/img/members/' . $item->image_name) }}"
+                                                        alt="Image" />
 
-                                        <div class="item">
-                                            <div class="avatar">
-                                                <img src="assets/images/testimonials/member3.png" alt="Image" />
+                                                </div>
+                                                <div class="testimonials">
+                                                    <em>"</em> Vtae sodales aliq uam morbi non sem lacus
+                                                    port mollis. Nunc condime tum metus eud molest sed
+                                                    consectetuer.<em>"</em>
+                                                </div>
+                                                <div class="clients_author">
+                                                    John Doe <span>Abc Company</span>
+                                                </div>
+                                                <!-- /.container-fluid -->
                                             </div>
-                                            <div class="testimonials">
-                                                <em>"</em>Vtae sodales aliq uam morbi non sem lacus port
-                                                mollis. Nunc condime tum metus eud molest sed
-                                                consectetuer.<em>"</em>
-                                            </div>
-                                            <div class="clients_author">
-                                                Stephen Doe <span>Xperia Designs</span>
-                                            </div>
-                                        </div>
-                                        <!-- /.item -->
-
-                                        <div class="item">
-                                            <div class="avatar">
-                                                <img src="assets/images/testimonials/member2.png" alt="Image" />
-                                            </div>
-                                            <div class="testimonials">
-                                                <em>"</em> Vtae sodales aliq uam morbi non sem lacus
-                                                port mollis. Nunc condime tum metus eud molest sed
-                                                consectetuer.<em>"</em>
-                                            </div>
-                                            <div class="clients_author">
-                                                Saraha Smith <span>Datsun &amp; Co</span>
-                                            </div>
-                                            <!-- /.container-fluid -->
-                                        </div>
+                                            <!-- /.item -->
+                                        @endforeach
                                         <!-- /.item -->
                                     </div>
                                     <!-- /.owl-carousel -->
@@ -283,7 +258,8 @@
                                                         <div class="product">
                                                             <div class="product-image">
                                                                 <div class="image">
-                                                                    <a href="detail.html"><img
+                                                                    <a
+                                                                        href="{{ route('item.showDetailPage', $item->title) }}"><img
                                                                             src="{{ asset('frontend/assets/img/' . $item->image_name) }}"
                                                                             alt="" /></a>
                                                                 </div>
@@ -295,12 +271,13 @@
 
                                                             <div class="product-info text-left">
                                                                 <h3 class="name">
-                                                                    <a href="detail.html">{{ $item->name }}</a>
+                                                                    <a
+                                                                        href="{{ route('item.showDetailPage', $item->title) }}">{{ $item->title }}</a>
                                                                 </h3>
                                                                 <div class="rating rateit-small"></div>
                                                                 <div class="description"></div>
                                                                 <div class="product-price">
-                                                                    <span class="price"> $45.99 </span>
+                                                                    <span class="price"> &euro;45.99 </span>
                                                                     <span
                                                                         class="price-before-discount">{{ $item->price }}</span>
                                                                 </div>

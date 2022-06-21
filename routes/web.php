@@ -13,7 +13,10 @@ use App\Http\Controllers\OrderItemController;
 use App\Http\Controllers\OrderStatusController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CheckoutController;
 use Illuminate\Support\Facades\DB;
+
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,9 +51,9 @@ Route::resource('admin/items', ItemController::class)->names('admin.items');
 
 //onderstaande routes zijn tijdelijke routes naar de blades
 
-Route::get('shopping-cart', function () {
-    return view('shopping-cart');
-});
+// Route::get('shopping-cart', function () {
+//     return view('shopping-cart');
+// });
 Route::get('users/login', function () {
     return view('users.login');
 });
@@ -63,6 +66,10 @@ Route::get('frontend/index', function () {
 Route::get('frontend/app', function () {
     return view('frontend.app');
 });
+
+// Route::get('frontend/checkout', function () {
+//     return view('frontend.checkout');
+// });
 
 
 Route::get('frontend/body/footer', function () {
@@ -80,13 +87,29 @@ Route::get('frontend/category', [ItemCategoryController::class, 'showCategoryPag
 
 Route::get('frontend/shop-page', [ItemController::class, 'showItemPage'])->name('item.showItemPage');
 
-Route::get('frontend/shop-page/{detail}', [ItemController::class, 'showDetailPage'])->name('item.showDetailPage');
+Route::get('shopping-cart', [OrderItemController::class, 'index'])->name('orderItem.index');
+
+Route::post('shopping-cart', [OrderItemController::class, 'store'])->name('orderItem.store');
+
+Route::delete('shopping-cart/{item}', [OrderItemController::class, 'destroy'])->name('orderItem.destroy');
+
+// Route::delete('shopping-cart/{item}', [OrderItemController::class, 'update'])->name('orderItem.update');
+
+Route::get('frontend/shop-page/{id}', [ItemController::class, 'showDetailPage'])->name('item.showDetailPage');
 
 Route::get('/', [HomeController::class, 'featuredItems'])->name('home.featuredItems');
 
+Route::get('checkout', [CheckoutController::class, 'index'])->name('checkout.index');
 
-Route::get('basket', [ItemController::class, 'basket']);
-Route::get('add-to-basket/{id}', [ItemController::class, 'addToCart']);
+Route::post('checkout', [UserController::class, 'store'])->name('user.store');
 
-Route::patch('update-basket', 'ItemsController@updateCart');
-Route::delete('remove-from-basket', 'ItemsController@remove');
+Route::get('empty', function () {
+    Cart::destroy();
+});
+
+
+// Route::get('basket', [ItemController::class, 'basket']);
+// Route::get('add-to-basket/{id}', [ItemController::class, 'addToCart']);
+
+// Route::patch('update-basket', 'ItemsController@updateCart');
+// Route::delete('remove-from-basket', 'ItemsController@remove');

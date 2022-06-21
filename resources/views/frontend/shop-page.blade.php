@@ -1,5 +1,7 @@
 @extends('frontend.app')
 
+
+
 @section('content')
     <div class="search-result-container">
 
@@ -46,7 +48,7 @@
                                             <div class="rating rateit-small"></div>
                                             <div class="description"></div>
                                             <div class="product-price">
-                                                <span class="price"> $45.99 </span>
+                                                <span class="price"> &euro;45.99 </span>
                                                 <span class="price-before-discount">{{ $item->price }}</span>
                                             </div>
                                             <!-- /.product-price -->
@@ -55,11 +57,15 @@
                                         <div class="cart clearfix animate-effect">
                                             <div class="action">
                                                 <ul class="list-unstyled">
-                                                    <li class="lnk shoppingcart" data-toggle="modal"
-                                                        data-target="#exampleModal">
-                                                        <a class="add-to-cart" href="#" title="Shopping Cart">
-                                                            <i class="fa fa-shopping-cart"></i>
-                                                        </a>
+                                                    <li class="lnk shoppingcart">
+                                                        <form action="{{ route('orderItem.index') }}" method="POST">
+                                                            @csrf
+                                                            <input type="hidden" name="item_id"
+                                                                value="{{ $item->id }}">
+                                                            <button data-toggle="tooltip" type="submit" title="Add Cart">
+                                                                <i class="fa fa-shopping-cart"></i>
+                                                            </button>
+                                                        </form>
                                                     </li>
                                                     <li class="lnk wishlist">
                                                         <a class="add-to-cart" href="detail.html" title="Wishlist">

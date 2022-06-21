@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Item;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\DB;
 
 
@@ -132,76 +133,80 @@ class ItemController extends Controller
     public function showDetailPage($title)
     {
         $item = Item::where('title', $title)->firstOrFail();
+        $cart = Cart::content();
 
 
-        return view('frontend.book_details.detail', compact('item'));
+        return view('frontend.book_details.detail')->with([
+            'item' =>  $item,
+            'cart' => $cart,
+        ]);
     }
 
 
 
-    public function basket()
-    {
-        return view('shopping-cart');
-    }
+    // public function basket()
+    // {
+    //     return view('shopping-cart');
+    // }
 
-    public function addToCart($id)
-    {
-        $item = Item::find($id);
-        if (!$item) {
-            abort(404);
-        }
-        $basket = session()->get('basket');
-        // if basket is empty then this the first item
-        if (!$basket) {
-            $basket = [
-                $id => [
-                    "name" => $item->title,
-                    "item_qty" => 1,
-                    "price" => $item->price,
-                    "author" => $item->author,
-                    "item_img" => $item->image_name
-                ]
-            ];
-            session()->put('basket', $basket);
-            return redirect()->back()->with('success', 'Item added to basket successfully!');
-        }
-        // if basket not empty then check if this item exist then increment item_qty
-        if (isset($basket[$id])) {
-            $basket[$id]['item_qty']++;
-            session()->put('basket', $basket);
-            return redirect()->back()->with('success', 'Item added to basket successfully!');
-        }
-        // if item not exist in basket then add to basket with item_qty = 1
-        $basket[$id] = [
-            "name" => $item->tilte,
-            "item_qty" => 1,
-            "price" => $item->price,
-            "author" => $item->author,
-            "item_img" => $item->image_name
-        ];
-        session()->put('basket', $basket);
-        return redirect()->back()->with('success', 'Item added to basket successfully!');
-    }
+    // public function addToCart($id)
+    // {
+    //     $item = Item::find($id);
+    //     if (!$item) {
+    //         abort(404);
+    //     }
+    //     $basket = session()->get('basket');
+    //     // if basket is empty then this the first item
+    //     if (!$basket) {
+    //         $basket = [
+    //             $id => [
+    //                 "name" => $item->title,
+    //                 "item_qty" => 1,
+    //                 "price" => $item->price,
+    //                 "author" => $item->author,
+    //                 "item_img" => $item->image_name
+    //             ]
+    //         ];
+    //         session()->put('basket', $basket);
+    //         return redirect()->back()->with('success', 'Item added to basket successfully!');
+    //     }
+    //     // if basket not empty then check if this item exist then increment item_qty
+    //     if (isset($basket[$id])) {
+    //         $basket[$id]['item_qty']++;
+    //         session()->put('basket', $basket);
+    //         return redirect()->back()->with('success', 'Item added to basket successfully!');
+    //     }
+    //     // if item not exist in basket then add to basket with item_qty = 1
+    //     $basket[$id] = [
+    //         "name" => $item->tilte,
+    //         "item_qty" => 1,
+    //         "price" => $item->price,
+    //         "author" => $item->author,
+    //         "item_img" => $item->image_name
+    //     ];
+    //     session()->put('basket', $basket);
+    //     return redirect()->back()->with('success', 'Item added to basket successfully!');
+    // }
 
-    public function updateCart(Request $request)
-    {
-        if ($request->id and $request->item_qty) {
-            $basket = session()->get('basket');
-            $basket[$request->id]["item_qty"] = $request->item_qty;
-            session()->put('basket', $basket);
-            session()->flash('success', 'Your Cart updated successfully');
-        }
-    }
+    // public function updateCart(Request $request)
+    // {
+    //     if ($request->id and $request->item_qty) {
+    //         $basket = session()->get('basket');
+    //         $basket[$request->id]["item_qty"] = $request->item_qty;
+    //         session()->put('basket', $basket);
+    //         session()->flash('success', 'Your Cart updated successfully');
+    //     }
+    // }
 
-    public function remove(Request $request)
-    {
-        if ($request->id) {
-            $basket = session()->get('basket');
-            if (isset($basket[$request->id])) {
-                unset($basket[$request->id]);
-                session()->put('basket', $basket);
-            }
-            session()->flash('success', 'Item removed successfully');
-        }
-    }
+    // public function remove(Request $request)
+    // {
+    //     if ($request->id) {
+    //         $basket = session()->get('basket');
+    //         if (isset($basket[$request->id])) {
+    //             unset($basket[$request->id]);
+    //             session()->put('basket', $basket);
+    //         }
+    //         session()->flash('success', 'Item removed successfully');
+    //     }
+    // }
 }

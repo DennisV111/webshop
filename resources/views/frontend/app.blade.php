@@ -42,6 +42,7 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/assets/css/rateit.css') }}" />
 
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/checkout.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/slider.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/search.css') }}">
@@ -66,6 +67,8 @@
 </head>
 
 <body>
+
+
 
     <header>
 
@@ -111,7 +114,7 @@
     <script src="{{ asset('frontend/assets/assets/js/wow.min.js') }}"></script>
     <script src="{{ asset('frontend/assets/assets/js/scripts.js') }}"></script>
 
-
+    @yield('extra-js')
 
 </body>
 

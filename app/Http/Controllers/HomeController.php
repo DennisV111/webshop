@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Item;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 use Illuminate\Http\Request;
 
@@ -22,6 +23,7 @@ class HomeController extends Controller
 
     public function index()
     {
+
         return view('frontend.index');
     }
 

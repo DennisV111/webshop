@@ -107,20 +107,27 @@
                                                 <div class="col-sm-2">
                                                     <div class="cart-quantity">
                                                         <div class="quant-input">
-                                                            <div class="arrows">
-                                                                <div class="arrow plus gradient"><span class="ir"><i
-                                                                            class="icon fa fa-sort-asc"></i></span></div>
-                                                                <div class="arrow minus gradient"><span class="ir"><i
-                                                                            class="icon fa fa-sort-desc"></i></span></div>
-                                                            </div>
-                                                            <input type="text" value="1">
+                                                            <input type="number" value="1" name="quantity"
+                                                                class="form-control">
                                                         </div>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-sm-7">
-                                                    <a href="#" class="btn btn-primary"><i
-                                                            class="fa fa-shopping-cart inner-center-vs"></i> ADD TO CART</a>
+                                                    {{-- @if ($cart->where('id', $item->id)->count())
+                                                        In Cart
+                                                    @else --}}
+                                                    <form action="{{ route('orderItem.index') }}" method="POST">
+                                                        @csrf
+                                                        <input type="hidden" name="item_id" value="{{ $item->id }}">
+                                                        <input type="hidden" name="title" value="{{ $item->title }}">
+                                                        <input type="hidden" name="price" value="{{ $item->price }}">
+
+
+                                                        <button type="submit" class=" btn-primary"> ADD TO
+                                                            CART</button>
+                                                    </form>
+                                                    {{-- @endif --}}
                                                 </div>
 
 
@@ -151,7 +158,7 @@
                                     <div class="tab-content">
 
                                         <div id="description" class="tab-pane in active">
-                                            <div class="product-tab">
+                                            <div class="product-tab">{{ $item->description }}
                                                 <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing
                                                     elit, sed
                                                     do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
