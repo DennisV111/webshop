@@ -1,5 +1,6 @@
 @extends('admin.admin')
 
+@auth
 @section('body')
     <div>
         <header>
@@ -31,5 +32,10 @@
             <button class="button edit">Update</button>
         </form>
     </div>
+    <br>
+    <nav>
+        <a class="button nav" href="{{ route('admin.index') }}">Back to start screen</a>
+    </nav>
 
 @endsection
+@endauth
