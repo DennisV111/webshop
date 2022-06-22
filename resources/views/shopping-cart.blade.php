@@ -10,6 +10,7 @@
                         <li class='active'>Shopping Cart</li>
                     </ul>
                 </div><!-- /.breadcrumb-inner -->
+
             </div><!-- /.container -->
         </div><!-- /.breadcrumb -->
 
@@ -276,16 +277,16 @@
             Array.from(classname).forEach(function(element) {
                 element.addEventListener('change', function() {
 
-                    axios.patch('frontend/shopping-cart/5', {
-                            quantity: 3
-                        })
-                        .then(function(response) {
-                            console.log(response);
-                        })
-                        .catch(function(error) {
-                            console.log(error);
-                        });
-                    // alert('You just updated the quantity of the product');
+                    // axios.patch('frontend/shopping-cart/5', {
+                    //         quantity: 3
+                    //     })
+                    //     .then(function(response) {
+                    //         console.log(response);
+                    //     })
+                    //     .catch(function(error) {
+                    //         console.log(error);
+                    //     });
+                    alert('You just updated the quantity of the product');
                 });
             });
 

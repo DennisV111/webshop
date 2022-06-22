@@ -116,6 +116,10 @@ Route::get('checkout', [CheckoutController::class, 'index'])->name('checkout.ind
 
 Route::post('checkout', [UserController::class, 'store'])->name('user.store');
 
+Route::post('order', [OrderController::class, 'store'])->name('order.store');
+
+// Route::get('/', [HomeController::class, 'search'])->name('home.search');
+
 Route::get('empty', function () {
     Cart::destroy();
 });

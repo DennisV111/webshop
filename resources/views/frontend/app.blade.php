@@ -52,7 +52,7 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/category.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/shoppingCart.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/detail.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/assets/css/details.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('frontend/assets/css/details.css') }}"> --}}
     {{-- <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}"> --}}
 
     <link rel="stylesheet" href="{{ asset('frontend/assets/assets/css/font-awesome.css') }}" />
@@ -103,7 +103,7 @@
     </script>
 
     <script src="{{ asset('frontend/assets/assets/js/jquery-1.11.1.min.js') }}"></script>
-    <script src="{{ asset('frontend/assets/jassets/s/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('frontend/assets/assets/js/bootstrap-hover-dropdown.min.js') }}"></script>
     <script src="{{ asset('frontend/assets/assets/js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('frontend/assets/assets/js/echo.min.js') }}"></script>
@@ -113,8 +113,9 @@
     <script src="{{ asset('frontend/assets/assets/js/bootstrap-select.min.js') }}"></script>
     <script src="{{ asset('frontend/assets/assets/js/wow.min.js') }}"></script>
     <script src="{{ asset('frontend/assets/assets/js/scripts.js') }}"></script>
+    <script src="{{ asset('frontend/assets/assets/js/slider.js') }}"></script>
 
-    @yield('extra-js')
+    {{-- @yield('extra-js') --}}
 
 </body>
 

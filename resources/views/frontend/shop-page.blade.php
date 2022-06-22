@@ -19,6 +19,9 @@
 
                                     </ul>
                                 </div>
+                                <div>
+                                    {{-- @include('frontend.body.search') --}}
+                                </div>
                                 <!-- /.breadcrumb-inner -->
                             </div>
                             <!-- /.container -->

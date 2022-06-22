@@ -43,7 +43,7 @@
                                                                 <li>
                                                                     <a href="#">Architectural Structure & Design</a>
                                                                 </li>
-                                                                <li><a href="#">History Of Architecture </a></li>
+                                                                <li><a href="#">History Of Architecture</a></li>
                                                                 <li>
                                                                     <a href="#">Individual Architects & Architectural
                                                                         Firms</a>
@@ -70,26 +70,14 @@
                                             <!-- /.dropdown-menu -->
                                         </li>
                                         <!-- /.menu-item -->
-
-
-                                        <!-- ================================== MEGAMENU VERTICAL ================================== -->
-                                        <!-- /.dropdown-menu -->
-                                        <!-- ================================== MEGAMENU VERTICAL ================================== -->
-                                        </li>
-                                        <!-- /.menu-item -->
-
-                                        <!-- /.menu-item -->
                                     </ul>
                                 @endforeach
                                 <!-- /.nav -->
                             </nav>
-                            <!-- /.megamenu-horizontal -->
                         </div>
-                        <!-- /.side-menu -->
                         <!-- ================================== TOP NAVIGATION : END ================================== -->
                         <div class="sidebar-module-container">
                             <div class="sidebar-filter">
-
                                 <!-- ============================================== PRICE SILDER============================================== -->
                                 <div class="sidebar-widget wow fadeInUp">
                                     <div class="widget-header">
@@ -101,14 +89,7 @@
                                                 <span class="pull-left">&euro;50.00</span>
                                                 <span class="pull-right">&euro;300.00</span>
                                             </span>
-                                            <input type="text" id="amount"
-                                                style="
-                                                                                                                                                                                                                        border: 0;
-                                                                                                                                                                                                                        color: #666666;
-                                                                                                                                                                                                                        font-weight: bold;
-                                                                                                                                                                                                                        text-align: center;
-                                                                                                                                                                                                                    " />
-                                            <input type="text" class="price-slider" value="" />
+                                            <input type="text" id="amount" class="price-slider" value="" />
                                         </div>
                                         <!-- /.price-range-holder -->
                                         <a href="#" class="btn-primary">Show Now</a>
@@ -118,8 +99,6 @@
                                 <!-- /.sidebar-widget -->
                                 <!-- ============================================== PRICE SILDER : END ============================================== -->
                                 <!-- ============================================== AUTHERS============================================== -->
-
-
                                 <div class="sidebar-widget wow fadeInUp">
                                     <div class="widget-header">
                                         <h4 class="widget-title">AUTHORS</h4>
@@ -144,7 +123,6 @@
                                                 <div class="avatar">
                                                     <img src="{{ asset('frontend/assets/img/members/' . $item->image_name) }}"
                                                         alt="Image" />
-
                                                 </div>
                                                 <div class="testimonials">
                                                     <em>"</em> Vtae sodales aliq uam morbi non sem lacus
@@ -261,14 +239,14 @@
                                                                     <a
                                                                         href="{{ route('item.showDetailPage', $item->title) }}"><img
                                                                             src="{{ asset('frontend/assets/img/' . $item->image_name) }}"
-                                                                            alt="" /></a>
+                                                                            alt="" />
+                                                                    </a>
                                                                 </div>
                                                                 <!-- /.image -->
-
-                                                                <div class="tag sale"><span>sale</span></div>
+                                                                <div class="tag sale"><span>sale</span>
+                                                                </div>
                                                             </div>
                                                             <!-- /.product-image -->
-
                                                             <div class="product-info text-left">
                                                                 <h3 class="name">
                                                                     <a
@@ -288,7 +266,8 @@
                                                                 <div class="action">
                                                                     <ul class="list-unstyled">
                                                                         <li class="lnk shoppingcart">
-                                                                            <a class="add-to-cart" href="detail.html"
+                                                                            <a class="add-to-cart"
+                                                                                href="{{ route('orderItem.index') }}"
                                                                                 title="Shopping Cart">
                                                                                 <i class="fa fa-shopping-cart"></i>
                                                                             </a>
@@ -299,18 +278,14 @@
                                                                                 <i class="icon fa fa-heart"></i>
                                                                             </a>
                                                                         </li>
-
                                                                     </ul>
                                                                 </div>
                                                                 <!-- /.action -->
                                                             </div>
                                                             <!-- /.cart -->
                                                         </div>
-
                                                         <!-- /.product -->
                                                     </div>
-
-
                                                     <!-- /.products -->
                                                 </div>
 
@@ -318,8 +293,6 @@
                                             @endforeach
 
                                             {{ $items->links() }}
-
-
 
                                             <!-- /.product-info -->
                                             <!-- /.cart -->
@@ -329,16 +302,12 @@
                                     <!-- /.products -->
                                 </div>
                                 <!-- /.item -->
-
-
                             </div>
                             <!-- /.row -->
                         </div>
                         <!-- /.category-product -->
                     </div>
                     <!-- /.tab-pane -->
-
-
                 </div>
                 <!-- /.tab-content -->
             </div>
@@ -347,11 +316,5 @@
         <!-- /.col -->
     </div>
     <!-- /.row -->
-    </div>
-    <!-- /.container -->
-    </div>
-    <!-- /.body-content -->
-
-    </div>
 @endsection
 <!-- ============================================================= FOOTER ============================================================= -->
