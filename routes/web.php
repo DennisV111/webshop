@@ -56,6 +56,8 @@ Route::resource('admin/items', ItemController::class)->names('admin.items');
 
 Route::resource('admin/categories', CategoryController::class)->names('admin.categories');
 
+Route::resource('admin/product_stock', ProductStockController::class)->names('admin.product_stock');
+
 // end of admin routes
 
 // Route::get('dennis/shop', [DennisController::class, 'index'])->name('dennis.index');
@@ -94,7 +96,7 @@ Route::get('frontend/body/header', function () {
 
 // Used Routes For Frontend Controller
 
-Route::get('frontend/category', [ItemCategoryController::class, 'showCategoryPage'])->name('itemcategory.showCategoryPage');
+Route::get('frontend/category', [CategoryController::class, 'showCategoryPage'])->name('itemcategory.showCategoryPage');
 
 Route::get('frontend/shop-page', [ItemController::class, 'showItemPage'])->name('item.showItemPage');
 

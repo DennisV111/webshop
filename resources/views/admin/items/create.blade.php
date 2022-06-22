@@ -8,7 +8,7 @@
     </div>
     <br>
     <div>
-        <h2>Add new item</h2>
+        <h2>Add Item</h2>
     </div>
     @if ($errors->any())
       <div >
@@ -32,10 +32,14 @@
                 <input type="text" id="author" name="author" value="Author" autocomplete="off">
             </p>
             <p> 
-                <label for="category">Category:</label>
+                <label for="category_id">Category:</label>
                 @foreach ($categories as $category)
                     <br>
-                    <input type="radio" id="{{ $category->name }}" name="category_id" value="{{ $category->id }}">
+                    <input type="radio" id="{{ $category->name }}" name="category_id" value="{{ $category->id }}"
+                    @if ( $category->id == 1 )
+                        checked
+                    @endif
+                    >
                     <label for="{{$category->name}}">{{$category->name}}</label> 
                 @endforeach
             </p>

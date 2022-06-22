@@ -69,7 +69,18 @@
         </tr>
     </table>
 </div>
-
+<br>
+<nav>
+    <a href="{{ route('admin.items.edit', $item->id ) }}"><button class="nav index edit">Edit Item</button></a>
+</nav>
+<br>
+<nav>
+    <form action="{{ route('admin.items.destroy', $item->id)}}" method="post">
+        @csrf
+        @method('DELETE')
+        <button class="nav index remove" type="submit">Delete Item</button>
+    </form>
+</nav>
 
 {{-- <div>
     <header>
