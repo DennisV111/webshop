@@ -30,6 +30,10 @@
     <nav>
         <a class="button nav index shop" href="{{ route('home.featuredItems')}}">Bookazine Webshop</a>
     </nav>
+    <br>
+    <nav>
+        <a class="button nav index remove" href="{{ route('signout')}}">Logout</a>
+    </nav>
     {{-- @for ( $i=0; $i <=10; $i++) {
         <br>
     }

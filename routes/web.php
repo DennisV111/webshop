@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DennisController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\StockController;
@@ -49,6 +50,10 @@ Route::get('frontend/category', [CategoryController::class, 'showCategoryPage'])
 Route::get('frontend/shop-page', [DennisController::class, 'index'])->name('dennis.index');
 
 //admin routes
+
+Route::get('login', [AuthController::class, 'index'])->name('login');
+Route::post('login', [AuthController::class, 'login'])->name('login.post'); 
+Route::get('signout', [AuthController::class, 'signOut'])->name('signout');
 
 Route::get('admin', [AdminController::class, 'index'])->name('admin.index');
 

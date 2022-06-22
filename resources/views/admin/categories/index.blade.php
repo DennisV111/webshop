@@ -1,5 +1,6 @@
 @extends('admin.admin')
 
+@auth
 @section('body')
 
 <div>
@@ -53,3 +54,4 @@
 
 
 @endsection
+@endauth
