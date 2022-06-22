@@ -94,7 +94,7 @@ Route::get('frontend/body/header', function () {
 
 // Used Routes For Frontend Controller
 
-Route::get('frontend/category', [ItemCategoryController::class, 'showCategoryPage'])->name('itemcategory.showCategoryPage');
+Route::get('frontend/category', [CategoryController::class, 'showCategoryPage'])->name('itemcategory.showCategoryPage');
 
 Route::get('frontend/shop-page', [ItemController::class, 'showItemPage'])->name('item.showItemPage');
 
@@ -113,6 +113,10 @@ Route::get('/', [HomeController::class, 'featuredItems'])->name('home.featuredIt
 Route::get('checkout', [CheckoutController::class, 'index'])->name('checkout.index');
 
 Route::post('checkout', [UserController::class, 'store'])->name('user.store');
+
+Route::post('order', [OrderController::class, 'store'])->name('order.store');
+
+// Route::get('/', [HomeController::class, 'search'])->name('home.search');
 
 Route::get('empty', function () {
     Cart::destroy();

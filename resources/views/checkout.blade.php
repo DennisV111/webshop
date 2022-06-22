@@ -25,10 +25,10 @@
 
         <div class="checkout-section">
             <div>
-                <form action="{{ route('user.store') }}" method="POST" id="payment-form">
-
+                <form action="{{ route('order.store') }}" method="POST" id="payment-form">
+                    @csrf
                     <h2>Billing Details</h2>
-                    <form></form>
+
                     <div class="form-group">
                         <label for="email">Email Address</label>
                         <input type="email" class="form-control" id="email" name="email" value="" required>
@@ -64,30 +64,14 @@
                         </div>
                     </div> <!-- end half-form -->
                     <br>
-                    <form class="d-grid gap-2 ">
-                        <button type="submit" class=" btn-primary " action ="">Complete Order</button>
-                    </form>
+
+                    <input type="submit" class=" btn-primary" value="Complete Order!">
+
                 </form>
 
                 <br>
                 <br>
 
-                <div class="mt-32">or</div>
-                <div class="mt-32">
-                    <h3>Pay with PayPal</h3>
-
-                    <form id="paypal-payment-form" action="">
-
-                        <section>
-                            <div class="bt-drop-in-wrapper">
-                                <div id="bt-dropin"></div>
-                            </div>
-                        </section>
-
-                        <input id="nonce" name="payment_method_nonce" type="hidden" />
-                        <button class="btn-primary" type="submit"><span>Pay with PayPal</span></button>
-                    </form>
-                </div>
 
             </div>
 

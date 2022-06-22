@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Order;
+use App\Models\User;
+use App\Models\Item;
+use App\Models\OrderItem;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 class OrderController extends Controller
 {
@@ -34,7 +38,53 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd(Cart::content());
+        $user = User::create(
+            [
+                'first_name'        => $request->input(key: 'first_name'),
+                'last_name'         => $request->input(key: 'last_name'),
+                'city'              => $request->input(key: 'city'),
+                'street_address'    => $request->input(key: 'street_address'),
+                'postal_code'       => $request->input(key: 'postal_code'),
+                'role'              => 'user',
+                'email'             => $request->input(key: 'email'),
+                'password'          => bcrypt($request->input(key: 'password')),
+            ]
+        );
+
+        $order = Order::create(
+            [
+                'user_id'           => $user->id,
+                'status_id'         => 1,
+                'total'             => Cart::total(),
+                'order_date'        => date('Y-m-d'),
+                'shipping_method'   => 'plain',
+            ]
+        );
+
+        // $order_item = OrderItem::create(
+        //     [
+        //         'item_id'           => $item->id,
+        //         'quantity'          => $order_item->quantity,
+        //         'price'             => $item->price,
+        //         'order_id'          => $order->id,
+        //         'vat'               => 21,
+        //     ]
+        // );
+
+        foreach (Cart::content() as $item) {
+            $order_item = OrderItem::create(
+                [
+                    'item_id'        => $item->id,
+                    'quantity'       => $item->qty,
+                    'price'          => $item->price * $item->qty,
+                    'order_id'       => $order->id,
+                    'vat'            => 21,
+                ]
+            );
+        }
+
+        return redirect()->route('checkout.index')->with('success', 'Order was created Successfully!');
     }
 
     /**
