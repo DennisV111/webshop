@@ -27,9 +27,23 @@
                             </div>
                             <!-- /.container -->
                         </div>
+
                         <h1>Search Results</h1>
-                        <p>3 result(s) for '{{ request->input('query') }}'</p>
+
+                        <div class="search-result-link">
+                            @if ($success)
+                                <p>{{ $items->count() }} result(s) for '{{ request()->input('search') }}'</p>
+                                {{-- @foreach ($items as $item)
+                                    <span>
+                                        <a href="{{ route('item.showDetailPage', $item->id) }}">{{ $item->title }}</a>
+                                    </span>
+                                @endforeach --}}
+                                @include('item')
+                            @else
+                                {{ $message }}
+                            @endif
+                        </div>
 
 
-                        {{ $items->links() }}
+                        {{-- {{ $items->links() }} --}}
                     @endsection

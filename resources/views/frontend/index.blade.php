@@ -8,14 +8,16 @@
                 <div class="slide-content">
                     <h1>The Ultimate Guide To Buying A Book</h1>
                     <h3>Choose Your Book</h3>
-                    <button class="btn"> shop now</button>
+                    <form action="{{ route('item.showItemPage') }}">
+                        <button type="submit" class="btn"> shop now</button>
+                    </form>
                 </div>
 
             </div>
             <div class="slide pg2">
                 <div class="slide-content">
                     <span>upto 70% off</span>
-                    <button class="btn">Shop Now</button>
+                    <button type="submit" class="btn">Shop Now</button>
                 </div>
             </div>
             <div class="slide pg3">
@@ -30,10 +32,7 @@
     <!-- Search -->
 
     <div class="box-search">
-        <form action="" method="GET">
-            <input type="text" name="" placeholder="Search...">
-            <input type="submit" name="" value="Search">
-        </form>
+        @include('frontend.body.search')
     </div>
 
     <!-- Search End -->

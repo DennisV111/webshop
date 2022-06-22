@@ -33,11 +33,4 @@ class HomeController extends Controller
 
         return view('frontend.index')->with('featuredBooks', $featuredBooks);
     }
-
-    // public function search(Request $request)
-    // {
-    //     // $search = request('search');
-    //     $items = Item::where('title', 'like', " %$query% ")->get();
-    //     return view('frontend.body.search-results')->with('items', $items);
-    // }
 }

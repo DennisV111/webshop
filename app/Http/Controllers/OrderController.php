@@ -60,6 +60,8 @@ class OrderController extends Controller
                 'order_date'        => date('Y-m-d'),
                 'shipping_method'   => 'plain',
             ]
+
+
         );
 
         // $order_item = OrderItem::create(
@@ -83,6 +85,9 @@ class OrderController extends Controller
                 ]
             );
         }
+
+
+        Cart::destroy();
 
         return redirect()->route('checkout.index')->with('success', 'Order was created Successfully!');
     }
