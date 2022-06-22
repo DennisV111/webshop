@@ -16,7 +16,7 @@
     </nav>
     <br>
     <nav>
-        <a class="button nav index" href="{{ route('admin.items.index')}}">Stock</a>
+        <a class="button nav index" href="{{ route('admin.product_stock.index')}}">Product Stock</a>
     </nav>
     <br>
     <nav>
@@ -25,6 +25,10 @@
     <br>
     <nav>
         <a class="button nav index" href="{{ route('admin.items.index')}}">Statistics</a>
+    </nav>
+    <br>
+    <nav>
+        <a class="button nav index shop" href="{{ route('home.featuredItems')}}">Bookazine Webshop</a>
     </nav>
     {{-- @for ( $i=0; $i <=10; $i++) {
         <br>
