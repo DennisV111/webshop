@@ -71,16 +71,8 @@ class ItemController extends Controller
         ]);
 
         $item = Item::create($validatedData);
-        //aanmaken stock
-        // $table->increments('id');
-        //     $table->unsignedInteger('item_id');
-        //     $table->foreign('item_id')->references('id')->on('items');
-        //     $table->integer('amount')->default(1);
 
-
-        $stock = ProductStock::create(['item_id' => $item->id, 'amount' => 0 ]);
-
-        //dd($stock);
+        ProductStock::create(['item_id' => $item->id, 'amount' => 0 ]);
 
         return redirect('/admin/items');
     }
@@ -95,6 +87,7 @@ class ItemController extends Controller
     {
         $item = Item::findOrFail($id);
         //$items = Item::with('stock')->get();
+        
       
         //$attributes = array_keys($item->toArray());
         //$showTableAttributes = array_slice($attributes, 0, count($attributes)-2);
@@ -108,13 +101,12 @@ class ItemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id, $attribute)
+    public function edit($id)
     {
-        dd($attribute);
-        //route('admin.items.edit', [$item->id, $item[$attribute] ])
         $item = Item::findOrFail($id);
+        $categories = Category::all();
 
-        return view('admin.items.edit', compact('item', 'attribute'));
+        return view('admin.items.edit', compact(['item','categories']));
     }
 
     /**
@@ -126,7 +118,25 @@ class ItemController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validatedData = $request->validate([
+            'title' => 'required|max:100',
+            'author' => 'required|max:60',
+            'category_id' => 'required',
+            'description' => 'required',
+            'language' => 'required|max:60',
+            'isbn' => 'required|max:20',
+            'dimensions' => 'required|max:60',
+            'image_name' => 'required|max:60',
+            'published' => 'required',
+            'format' => 'required|max:20',
+            'pages' => 'required',
+            'price' => 'required',
+            'vat' => 'required'
+        ]);
+
+        Item::whereId($id)->update($validatedData);
+
+        return redirect('/admin/items');
     }
 
     /**
@@ -138,6 +148,11 @@ class ItemController extends Controller
     public function destroy($id)
     {
         //
+        $item = Item::findOrFail($id);
+        $item->product_stock->delete();
+        $item->delete();
+
+        return redirect('/admin/items');
     }
 
 

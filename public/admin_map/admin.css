@@ -82,6 +82,10 @@ caption {
     color: black;
 }
 
+.shop {
+    background-color: rgb(154, 187, 154);
+}
+
 .show {
     background-color: rgb(204, 204, 204);
 }

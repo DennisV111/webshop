@@ -27,12 +27,12 @@
                             <nav class="yamm megamenu-horizontal">
 
 
-                                @foreach ($item_categories as $item_category)
+                                @foreach ($categories as $category)
                                     <ul class="nav">
                                         <li class="dropdown menu-item">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
                                                     class="icon fa fa-building"
-                                                    aria-hidden="true"></i>{{ $item_category->name }}</a>
+                                                    aria-hidden="true"></i>{{ $category->name }}</a>
                                             <!-- ================================== MEGAMENU VERTICAL ================================== -->
                                             <ul class="dropdown-menu mega-menu">
                                                 <li class="yamm-content">

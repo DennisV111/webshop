@@ -8,7 +8,7 @@
     </div>
     <br>
     <div>
-        <h2>Edit category</h2>
+        <h2>Edit Category</h2>
     </div>
     @if ($errors->any())
       <div >

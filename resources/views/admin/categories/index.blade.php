@@ -19,7 +19,8 @@
             <tr>
                 <td>{{ $category->name }}</td>
                 <td>
-                    <a href="{{ route('admin.categories.edit', $category->id)}}"><button class="edit">Edit</button></a></td>
+                    <a href="{{ route('admin.categories.edit', $category->id)}}"><button class="edit">Edit</button></a>
+                </td>
                 <td>
                     <form action="{{ route('admin.categories.destroy', $category->id)}}" method="post">
                         @csrf

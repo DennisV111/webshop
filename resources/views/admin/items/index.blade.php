@@ -16,6 +16,7 @@
             <th>Author</th>
             <th>Price</th>
             <th>Product Stock</th>
+            <th colspan="2">Action</th>
         </tr>
         @foreach ($items as $item)
             <tr>
@@ -25,6 +26,16 @@
                 <td>{{ $item->author }}</td>
                 <td>{{ $item->price }}</td>
                 <td>{{ $item->product_stock->amount }}</td>
+                <td>
+                    <a href="{{ route('admin.items.edit', $item->id)}}"><button class="edit">Edit</button></a>
+                </td>
+                <td>
+                    <form action="{{ route('admin.items.destroy', $item->id)}}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <button class="remove" type="submit">Delete</button>
+                    </form>
+                </td>
             </tr>
         @endforeach        
     </table>
