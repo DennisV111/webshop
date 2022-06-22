@@ -73,9 +73,9 @@ Route::get('users/login', function () {
 Route::get('users/signup', function () {
     return view('users.signup');
 });
-Route::get('frontend/index', function () {
-    return view('frontend.index');
-});
+// Route::get('frontend/index', function () {
+//     return view('frontend.index');
+// });
 Route::get('frontend/app', function () {
     return view('frontend.app');
 });
@@ -118,7 +118,7 @@ Route::post('checkout', [UserController::class, 'store'])->name('user.store');
 
 Route::post('order', [OrderController::class, 'store'])->name('order.store');
 
-// Route::get('/', [HomeController::class, 'search'])->name('home.search');
+Route::post('search', [ItemController::class, 'findBooks'])->name('item.findBooks');
 
 Route::get('empty', function () {
     Cart::destroy();

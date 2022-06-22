@@ -72,7 +72,7 @@ class ItemController extends Controller
 
         $item = Item::create($validatedData);
 
-        ProductStock::create(['item_id' => $item->id, 'amount' => 0 ]);
+        ProductStock::create(['item_id' => $item->id, 'amount' => 0]);
 
 
         return redirect('/admin/items');
@@ -105,7 +105,7 @@ class ItemController extends Controller
         $item = Item::findOrFail($id);
         $categories = Category::all();
 
-        return view('admin.items.edit', compact(['item','categories']));
+        return view('admin.items.edit', compact(['item', 'categories']));
     }
 
     /**
@@ -174,6 +174,31 @@ class ItemController extends Controller
         return view('frontend.book_details.detail')->with([
             'item' =>  $item,
             'cart' => $cart,
+        ]);
+    }
+
+    public function findBooks(Request $request)
+    {
+        $items = null;
+        $success = false;
+
+        if (strlen($request->search) >= 3) {
+            // $categories = Category::where('name', 'like', '%' . $request->search . '%')->get();
+            $items = Item::where('title', 'like', '%' . $request->search . '%')
+                ->orWhere('author', 'like', '%' . $request->search . '%')
+                ->orWhere('description', 'like', '%' . $request->search . '%')
+                ->get();
+            $message = $items->count() . ' results found';
+            $success = true;
+        } else {
+            $message = "Enter minimal 3 characters";
+        }
+
+        return view('frontend.body.search_results', [
+            'items' => $items,
+            // 'categories' => $categories,
+            'success' => $success,
+            'message' => $message,
         ]);
     }
 }

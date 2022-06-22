@@ -86,13 +86,7 @@ return [
     |
     */
 
-    // 'discount' => [
 
-    //     'decimals' => 45,
 
-    //     'decimal_point' => '.',
 
-    //     'thousand_separator' => ',',
-
-    // ],
 ];

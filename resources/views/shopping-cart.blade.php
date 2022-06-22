@@ -276,7 +276,6 @@
 
             Array.from(classname).forEach(function(element) {
                 element.addEventListener('change', function() {
-
                     // axios.patch('frontend/shopping-cart/5', {
                     //         quantity: 3
                     //     })
