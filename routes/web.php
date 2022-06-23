@@ -16,6 +16,8 @@ use App\Http\Controllers\StatusController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\ConfirmationController;
+
 use Illuminate\Support\Facades\DB;
 
 use Gloudemans\Shoppingcart\Facades\Cart;
@@ -52,7 +54,7 @@ Route::get('frontend/shop-page', [DennisController::class, 'index'])->name('denn
 //admin routes
 
 Route::get('login', [AuthController::class, 'index'])->name('login');
-Route::post('login', [AuthController::class, 'login'])->name('login.post'); 
+Route::post('login', [AuthController::class, 'login'])->name('login.post');
 Route::get('signout', [AuthController::class, 'signOut'])->name('signout');
 
 Route::get('admin', [AdminController::class, 'index'])->name('admin.index');
@@ -115,6 +117,8 @@ Route::delete('shopping-cart/{item}', [OrderItemController::class, 'destroy'])->
 
 Route::get('frontend/shop-page/{id}', [ItemController::class, 'showDetailPage'])->name('item.showDetailPage');
 
+Route::patch('frontend/shop-page/{id}', [ItemController::class, 'updateQuantity'])->name('item.updateQuantity');
+
 Route::get('/', [HomeController::class, 'featuredItems'])->name('home.featuredItems');
 
 Route::get('checkout', [CheckoutController::class, 'index'])->name('checkout.index');
@@ -125,13 +129,9 @@ Route::post('order', [OrderController::class, 'store'])->name('order.store');
 
 Route::post('search', [ItemController::class, 'findBooks'])->name('item.findBooks');
 
+Route::get('/thankyou', [OrderController::class, 'index'])->name('order.index');
+
+
 Route::get('empty', function () {
     Cart::destroy();
 });
-
-
-// Route::get('basket', [ItemController::class, 'basket']);
-// Route::get('add-to-basket/{id}', [ItemController::class, 'addToCart']);
-
-// Route::patch('update-basket', 'ItemsController@updateCart');
-// Route::delete('remove-from-basket', 'ItemsController@remove');

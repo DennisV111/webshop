@@ -172,9 +172,12 @@ class ItemController extends Controller
         $cart = Cart::content();
 
 
+
+
         return view('frontend.book_details.detail')->with([
             'item' =>  $item,
             'cart' => $cart,
+
         ]);
     }
 
@@ -201,5 +204,15 @@ class ItemController extends Controller
             'success' => $success,
             'message' => $message,
         ]);
+    }
+
+    public function updateQuantity(Request $request, $id)
+    {
+        // return $request->all();
+        Cart::update($id, $request->quantity);
+
+        session()->flash('success', 'Quantity was updated successfully');
+
+        return response()->json(['success' => true]);
     }
 }
