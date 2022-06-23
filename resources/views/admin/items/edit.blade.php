@@ -9,8 +9,11 @@
     </div>
     <br>
     <div>
-        <h2>Edit Item</h2>
+        <div class="subheader">
+            <h2>Edit Item: {{ $item->title }}</h2>
+        </div>
     </div>
+    <br>
     @if ($errors->any())
       <div >
         <ul>
@@ -88,6 +91,10 @@
             <button class=" button add">Update</button>
         </form>
     </div>
+    <br>
+    <nav>
+        <a class="button nav" href="{{ route('admin.items.index') }}">Back</a>
+    </nav>
 
 @endsection
 @endauth

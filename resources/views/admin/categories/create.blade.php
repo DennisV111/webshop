@@ -9,8 +9,11 @@
     </div>
     <br>
     <div>
-        <h2>Add Category</h2>
+        <div class="subheader">
+            <h2>Create New Category</h2>
+        </div>
     </div>
+    <br>
     @if ($errors->any())
       <div >
         <ul>
@@ -26,11 +29,15 @@
             @csrf
             <p>
                 <label for="category">Name:</label>
-                <input type="text" id="category" name="name" value="Category">
+                <input type="text" id="category" name="name" value="Category" autocomplete="off" autofocus >
             </p>
             <button class=" button add">Submit</button>
         </form>
     </div>
+    <br>
+    <nav>
+        <a class="button nav" href="{{ route('admin.categories.index') }}">Back</a>
+    </nav>
 
 @endsection
 @endauth

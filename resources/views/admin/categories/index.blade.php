@@ -5,13 +5,18 @@
 
 <div>
     <header>
-        <h2>Bookazine Dashboard</h2>
+        <h1>Bookazine Dashboard</h1>
     </header>
 </div>
 <br>
 <div>
+    <div class="subheader">
+        <h2>Current Categories</h2>
+    </div>
+</div>
+<br>
+<div>
     <table>
-        <caption>Current Categories</caption>
         <tr>
             <th>Name</th>
             <th colspan="2">Action</th>
@@ -39,7 +44,7 @@
 </nav>
 <br>
 <nav>
-    <a class="button nav" href="{{ route('admin.index') }}">Back to start screen</a>
+    <a class="button nav" href="{{ route('admin.index') }}">Back</a>
 </nav>
 {{-- 
 <td><a href="{{ route('persons.show', $person->id)}}"><button class="show">Show CV</button></a></td>
