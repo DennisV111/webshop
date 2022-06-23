@@ -14,7 +14,7 @@ class CategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
+    {
         $categories = Category::all();
 
         return view('admin.categories.index', compact('categories'));
@@ -68,7 +68,6 @@ class CategoryController extends Controller
         $category = Category::findOrFail($id);
 
         return view('admin.categories.edit', compact('category'));
-
     }
 
     /**
@@ -101,12 +100,13 @@ class CategoryController extends Controller
 
         return redirect('/admin/categories');
     }
-    
+
 
 
     // New Function Anas
     public function showCategoryPage()
     {
+
         $categories = Category::all();
         $items = Item::paginate(12);
         $authors = Item::paginate(6);

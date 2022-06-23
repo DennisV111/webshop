@@ -161,6 +161,7 @@ class ItemController extends Controller
 
     public function showItemPage()
     {
+
         $items = Item::paginate(12);
 
         return view('frontend.shop-page', compact('items'));

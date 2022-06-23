@@ -30,11 +30,12 @@
                                 @foreach ($categories as $category)
                                     <ul class="nav">
                                         <li class="dropdown menu-item">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
+                                            <a
+                                                href="{{ route('itemcategory.showCategoryPage', ['category' => $category->slug]) }}"><i
                                                     class="icon fa fa-building"
                                                     aria-hidden="true"></i>{{ $category->name }}</a>
                                             <!-- ================================== MEGAMENU VERTICAL ================================== -->
-                                            <ul class="dropdown-menu mega-menu">
+                                            {{-- <ul class="dropdown-menu mega-menu">
                                                 <li class="yamm-content">
                                                     <div class="row">
                                                         <div class="col-sm-12 col-md-3">
@@ -66,7 +67,7 @@
                                                     <!-- /.row -->
                                                 </li>
                                                 <!-- /.yamm-content -->
-                                            </ul>
+                                            </ul> --}}
                                             <!-- /.dropdown-menu -->
                                         </li>
                                         <!-- /.menu-item -->
@@ -176,17 +177,7 @@
 
                         <div class="clearfix filters-container m-t-10">
                             <div class="row">
-                                <div class="col col-sm-6 col-md-2">
-                                    <div class="filter-tabs">
-                                        <ul id="filter-tabs" class="nav nav-tabs nav-tab-box nav-tab-fa-icon">
-                                            <li class="active">
-                                                <a data-toggle="tab" href="#grid-container"><i
-                                                        class="icon fa fa-th-large"></i>Grid</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!-- /.filter-tabs -->
-                                </div>
+
                                 <!-- /.col -->
                                 <div class="col col-sm-12 col-md-6">
                                     <div class="col col-sm-3 col-md-6 no-padding">
@@ -194,8 +185,7 @@
                                             <span class="lbl">Sort by</span>
                                             <div class="fld inline">
                                                 <div class="dropdown dropdown-small dropdown-med dropdown-white inline">
-                                                    <button data-toggle="dropdown" type="button"
-                                                        class="btn dropdown-toggle">
+                                                    <button data-toggle="dropdown" type="button" class="btn ">
                                                         Position <span class="caret"></span>
                                                     </button>
                                                     <ul role="menu" class="dropdown-menu">

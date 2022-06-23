@@ -82,13 +82,13 @@ body,
     outline: none;
 }
 
-/* .slide-content h1 {
+.slide-content h1 {
     font-size: 3rem;
     color: #fff;
-}*/
+}
 
 .slide-content h3 {
-    font-size: 3rem;
-    color: #d6000e8a;
+    font-size: 5rem;
+    color: #d6000ebb;
     font-family: 'Dancing Script', cursive;
 }
