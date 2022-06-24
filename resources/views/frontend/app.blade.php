@@ -52,6 +52,7 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/category.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/shoppingCart.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/detail.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/thankyou.css') }}">
     {{-- <link rel="stylesheet" href="{{ asset('frontend/assets/css/details.css') }}"> --}}
     {{-- <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}"> --}}
 
@@ -115,7 +116,7 @@
     <script src="{{ asset('frontend/assets/assets/js/scripts.js') }}"></script>
     <script src="{{ asset('frontend/assets/assets/js/slider.js') }}"></script>
 
-    {{-- @yield('extra-js') --}}
+    @yield('extra-js')
 
 </body>
 

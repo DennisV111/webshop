@@ -67,6 +67,7 @@
 
                     <input type="submit" class=" btn-primary" value="Complete Order!">
 
+
                 </form>
 
                 <br>
@@ -94,7 +95,7 @@
                             </div> <!-- end checkout-table -->
 
                             <div class="checkout-table-row-right">
-                                <div class="checkout-table-quantity">{{ $item->quantity }}</div>
+                                <div class="checkout-table-quantity">{{ $item->qty }}</div>
                             </div>
                         </div> <!-- end checkout-table-row -->
 

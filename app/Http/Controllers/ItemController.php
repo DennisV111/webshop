@@ -161,6 +161,7 @@ class ItemController extends Controller
 
     public function showItemPage()
     {
+
         $items = Item::paginate(12);
 
         return view('frontend.shop-page', compact('items'));
@@ -172,9 +173,12 @@ class ItemController extends Controller
         $cart = Cart::content();
 
 
+
+
         return view('frontend.book_details.detail')->with([
             'item' =>  $item,
             'cart' => $cart,
+
         ]);
     }
 
@@ -201,5 +205,15 @@ class ItemController extends Controller
             'success' => $success,
             'message' => $message,
         ]);
+    }
+
+    public function updateQuantity(Request $request, $id)
+    {
+        // return $request->all();
+        Cart::update($id, $request->quantity);
+
+        session()->flash('success', 'Quantity was updated successfully');
+
+        return response()->json(['success' => true]);
     }
 }

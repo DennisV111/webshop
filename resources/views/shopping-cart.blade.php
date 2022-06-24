@@ -45,7 +45,7 @@
                                                 <th class="cart-romove item">Remove</th>
                                                 <th class="cart-description item">Image</th>
                                                 <th class="cart-product-name item">The Book</th>
-                                                <th class="cart-edit item">Edit</th>
+                                                {{-- <th class="cart-edit item">Edit</th> --}}
                                                 <th class="cart-qty item">Quantity</th>
                                                 <th class="cart-sub-total item text-center">Subtotal</th>
                                                 <th class="cart-total last-item">Price</th>
@@ -109,14 +109,14 @@
                                                         </div>
                                                     </td>
 
-                                                    <td class="cart-product-edit"><a href="#"
+                                                    {{-- <td class="cart-product-edit"><a href="#"
                                                             class="product-edit">Edit</a>
-                                                    </td>
-                                                    <td class="cart-product-quantity">
+                                                    </td> --}}
+                                                    <td>
                                                         <select class="quantity" data-id="{{ $item->rowId }}"
                                                             data-productQuantity="{{ $item->model->quantity }}">
                                                             @for ($i = 1; $i < 5 + 1; $i++)
-                                                                <option {{ $item->quantity == $i ? 'selected' : '' }}>
+                                                                <option {{ $item->qty == $i ? 'selected' : '' }}>
                                                                     {{ $i }}</option>
                                                             @endfor
                                                         </select>
@@ -127,7 +127,7 @@
                                                     </td>
 
                                                     <td class="cart-product-grand-total"><span
-                                                            class="cart-grand-total-price">&euro;{{ $item->price }}</span>
+                                                            class="cart-grand-total-price">&euro;{{ $item->subtotal }}</span>
                                                     </td>
 
                                                 </tr>
@@ -276,16 +276,23 @@
 
             Array.from(classname).forEach(function(element) {
                 element.addEventListener('change', function() {
-                    // axios.patch('frontend/shopping-cart/5', {
-                    //         quantity: 3
-                    //     })
-                    //     .then(function(response) {
-                    //         console.log(response);
-                    //     })
-                    //     .catch(function(error) {
-                    //         console.log(error);
-                    //     });
-                    alert('You just updated the quantity of the product');
+                    const id = element.getAttribute('data-id')
+                    const productQuantity = element.getAttribute('data-productQuantity')
+
+                    axios.patch(`frontend/shop-page/${id}`, {
+                            quantity: this.value,
+                            productQuantity: productQuantity,
+                            _method: 'patch'
+                        })
+                        .then(function(response) {
+                            window.location.href = "{{ route('orderItem.index') }}"
+                            // console.log(response);
+                        })
+                        .catch(function(error) {
+                            window.location.href = "{{ route('orderItem.index') }}"
+                            // console.log(error);
+                        });
+                    // alert('You just updated the quantity of the product');
                 });
             });
 
