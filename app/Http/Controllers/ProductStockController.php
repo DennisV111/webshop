@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\ProductStock;
 
 class ProductStockController extends Controller
 {
@@ -13,7 +14,9 @@ class ProductStockController extends Controller
      */
     public function index()
     {
-        //
+        $product_stocks = ProductStock::all();
+
+        return view('admin.product_stock.index', compact('product_stocks'));
     }
 
     /**

@@ -5,21 +5,18 @@
 
 <div>
     <header>
-        <h2>Bookazine Dashboard</h2>
+        <h1>Bookazine Dashboard</h1>
     </header>
 </div>
 <br>
 <div>
+    <div class="subheader">
+        <h2>Item Details: {{ $item->title }}</h2>
+    </div>
+</div>
+<br>
+<div>
     <table>
-        <caption>Title: {{ $item->title }}</caption>
-        {{-- <tr>
-            <th>Title</th>
-            <td>{{ $item->title }}</td>
-        </tr> --}}
-        <tr>
-            <th>Category</th>
-            <td>{{ $item->category->name }}</td>
-        </tr>
         <tr>
             <th>Product Stock</th>
             <td>{{ $item->product_stock->amount }}</td>
@@ -27,6 +24,10 @@
         <tr>
             <th>Author</th>
             <td>{{ $item->author }}</td>
+        </tr>
+        <tr>
+            <th>Category</th>
+            <td>{{ $item->category->name }}</td>
         </tr>
         <tr>
             <th>Description</th>
@@ -70,17 +71,21 @@
         </tr>
     </table>
 </div>
-<br>
+<br>""
 <nav>
-    <a href="{{ route('admin.items.edit', $item->id ) }}"><button class="nav index edit">Edit Item</button></a>
+    <a href="{{ route('admin.items.edit', $item->id ) }}"><button class="btn edit">Edit Item</button></a>
 </nav>
 <br>
 <nav>
     <form action="{{ route('admin.items.destroy', $item->id)}}" method="post">
         @csrf
         @method('DELETE')
-        <button class="nav index remove" type="submit">Delete Item</button>
+        <button class="btn remove" type="submit">Delete Item</button>
     </form>
+</nav>
+<br><br>
+<nav>
+    <a class="button nav" href="{{ route('admin.items.index') }}">Back</a>
 </nav>
 
 {{-- <div>

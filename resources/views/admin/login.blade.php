@@ -39,6 +39,10 @@
             <button class="button add">Signin</button>
         </form>
     </div>
+    <br>
+    <nav>
+        <a class="button nav index shop" href="{{ route('home.featuredItems')}}">Go To The Bookazine Webshop</a>
+    </nav>
     
 </body>
 

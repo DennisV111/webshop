@@ -9,8 +9,11 @@
     </div>
     <br>
     <div>
-        <h2>Edit Category</h2>
+        <div class="subheader">
+            <h2>Edit Category: {{ $category->name }}</h2>
+        </div>
     </div>
+    <br>
     @if ($errors->any())
       <div >
         <ul>
@@ -34,7 +37,7 @@
     </div>
     <br>
     <nav>
-        <a class="button nav" href="{{ route('admin.index') }}">Back to start screen</a>
+        <a class="button nav" href="{{ route('admin.categories.index') }}">Back</a>
     </nav>
 
 @endsection
