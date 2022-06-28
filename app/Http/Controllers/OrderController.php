@@ -39,7 +39,6 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        // dd(Cart::content());
         $user = User::create(
             [
                 'first_name'        => $request->input(key: 'first_name'),
@@ -64,16 +63,6 @@ class OrderController extends Controller
 
 
         );
-
-        // $order_item = OrderItem::create(
-        //     [
-        //         'item_id'           => $item->id,
-        //         'quantity'          => $order_item->quantity,
-        //         'price'             => $item->price,
-        //         'order_id'          => $order->id,
-        //         'vat'               => 21,
-        //     ]
-        // );
 
         foreach (Cart::content() as $item) {
             $order_item = OrderItem::create(
@@ -137,7 +126,6 @@ class OrderController extends Controller
     {
         //
     }
-
 
     public function addOrder(Request $request)
     {

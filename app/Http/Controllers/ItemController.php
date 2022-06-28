@@ -22,17 +22,9 @@ class ItemController extends Controller
      */
     public function index()
     {
-        //$items = Item::with('stock')->get();
         $items = Item::all();
 
-        //$columns = Schema::getColumnListing(['items','category']);
-        //$moreColumns = Schema::getColumnListing('categories');
-        //$indexAttributes = array_merge($columns, $moreColumns);
-        //$indexAttributes = ['title','author','isbn' , 'category->name', 'stock_id'];
-
         return view('admin.items.index', compact('items'));
-
-        return view('admin.items.index', compact('items', 'indexAttributes'));
     }
 
     /**
@@ -75,7 +67,6 @@ class ItemController extends Controller
 
         ProductStock::create(['item_id' => $item->id, 'amount' => 0]);
 
-
         return redirect('/admin/items');
     }
 
@@ -88,9 +79,6 @@ class ItemController extends Controller
     public function show($id)
     {
         $item = Item::findOrFail($id);
-        //$items = Item::with('stock')->get();
-        //$attributes = array_keys($item->toArray());
-        //$showTableAttributes = array_slice($attributes, 0, count($attributes)-2);
 
         return view('admin.items.show', compact('item'));
     }
@@ -155,8 +143,6 @@ class ItemController extends Controller
         return redirect('/admin/items');
     }
 
-
-
     // New Functions Anas
 
     public function showItemPage()
@@ -172,13 +158,9 @@ class ItemController extends Controller
         $item = Item::where('title', $title)->firstOrFail();
         $cart = Cart::content();
 
-
-
-
         return view('frontend.book_details.detail')->with([
             'item' =>  $item,
             'cart' => $cart,
-
         ]);
     }
 

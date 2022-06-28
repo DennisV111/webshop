@@ -107,21 +107,4 @@ class OrderItemController extends Controller
 
         return back()->with('success_message', 'Item has been removed!');
     }
-
-    // public function empty()
-    // {
-    //     Cart::destroy();
-
-
-    // }
-
-    // public function checkout()
-    // {
-    //     $cart = Cart::where('user_id', auth()->id())->get();
-    //     foreach ($cart as $cartItem) {
-    //         $item = Item::find($cartItem->item_id);
-    //         if (! $item || $item->)
-
-    //     }
-    // }
 }
