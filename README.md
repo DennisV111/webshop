@@ -1,6 +1,7 @@
-Tijdens de web development bootcamp hebben we in groepjes van 2 personen gewerkt aan het ontwikkelen van een webshop.
+During the web development bootcamp we worked in groups of 2 people to develop a webshop.
 
-Anas Zorom heeft gewerkt aan de voorkant van de webshop.
-Dennis Visser heeft het datamodel van de webshop opgezet en heeft het admin dashboard van de webshop gemaakt.
+For the project we worked with the PHP framework Laravel.
 
-Het project is echter nog lang niet af.
+Anas Zorom has worked on the client side of the webshop. Dennis Visser has set up the data model of the webshop and created the admin dashboard of the webshop.
+
+However, the project is far from finished.
